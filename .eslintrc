@@ -13,12 +13,12 @@
     "jest": true
   },
   "rules": {
-    // Make prettier code formatting suggestions more verbose.
     "prettier/prettier": ["warn"],
-    // Disable <Fragment> => <> replacement. Feel free to change
     "react/jsx-fragments": "off",
-    // Disable prefer default export
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "comma-dangle": ["error", "always-multiline"],
+    "react/jsx-props-no-spreading": "off"
   },
   "overrides": [
     {

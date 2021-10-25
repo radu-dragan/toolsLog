@@ -1,0 +1,67 @@
+{
+  "BK": {
+    "01": {
+      "title": "Peugeot",
+      "description": "",
+      "fullName": "",
+      "weight": "",
+      "EaseOfUse": "1",
+      "trainSafe": "",
+      "expectedSpeed": ""
+    },
+    "02": {
+      "title": "Triban RC 500",
+      "description": "",
+      "fullName": "",
+      "weight": "",
+      "EaseOfUse": "3",
+      "trainSafe": "",
+      "expectedSpeed": ""
+    },
+    "03": {
+      "title": "BagFiets",
+      "description": "",
+      "fullName": "",
+      "weight": "",
+      "EaseOfUse": "2",
+      "trainSafe": "",
+      "expectedSpeed": ""
+    },
+    "04": {
+      "title": "Rocketa Alb pliabil",
+      "description": "",
+      "fullName": "",
+      "weight": "",
+      "EaseOfUse": "0",
+      "trainSafe": "",
+      "expectedSpeed": ""
+    },
+    "05": {
+      "title": "Pegas Hoinar",
+      "description": "",
+      "fullName": "",
+      "weight": "",
+      "EaseOfUse": "1",
+      "trainSafe": "",
+      "expectedSpeed": ""
+    },
+    "06": {
+      "title": "Brompton",
+      "description": "",
+      "fullName": "",
+      "weight": "",
+      "EaseOfUse": "1",
+      "trainSafe": "",
+      "expectedSpeed": ""
+    },
+    "07": {
+      "title": "CutomFrame Fixie",
+      "description": "",
+      "fullName": "",
+      "weight": "",
+      "EaseOfUse": "3",
+      "trainSafe": "",
+      "expectedSpeed": ""
+    }
+  }
+}

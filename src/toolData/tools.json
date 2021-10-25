@@ -1,0 +1,99 @@
+{
+  "A": {
+    "00001": {
+      "title": "SOCKET & RATCHET DRIVE SET",
+      "description": "",
+      "fullName": "Powerfix Profi SOCKET & RATCHET DRIVE SET ",
+      "subTools": ["RATCHET DRIVE 1/4", "16mm 60mm"],
+      "bothFrom": {
+        "store": "Lidle Romania Bucuresti",
+        "price": "15 Euro"
+      },
+      "state": {
+        "value": "",
+        "needReplace": "",
+        "mods": "",
+        "consumabile": ""
+      },
+      "ExteralLink": "http://offers.kd2.org/en/ie/lidl/pfJWt/",
+      "note": "This is the most Important tool i have",
+      "monthlyUse": "10"
+    },
+    "00002": {
+      "title": "Hot Glue Gun",
+      "description": "",
+      "fullName": "",
+      "subTools": [""],
+      "bothFrom": {
+        "store": "",
+        "price": ""
+      },
+      "state": {
+        "value": "",
+        "needReplace": "",
+        "mods": "",
+        "consumabile": ""
+      },
+      "ExteralLink": "",
+      "note": "",
+      "monthlyUse": ""
+    },
+    "00003": {
+      "title": "Label Maker",
+      "description": "",
+      "fullName": "Brother P-touch H105",
+      "subTools": [""],
+      "bothFrom": {
+        "store": "",
+        "price": ""
+      },
+      "state": {
+        "value": "",
+        "needReplace": "",
+        "mods": "",
+        "consumabile": ""
+      },
+      "ExteralLink": "",
+      "note": "",
+      "monthlyUse": ""
+    },
+    "00004": {
+      "title": "Keys 7x",
+      "description": "",
+      "fullName": "Brother P-touch H105",
+      "subTools": [""],
+      "bothFrom": {
+        "store": "",
+        "price": ""
+      },
+      "state": {
+        "value": "",
+        "needReplace": "",
+        "mods": "",
+        "consumabile": ""
+      },
+      "ExteralLink": "",
+      "note": "",
+      "monthlyUse": ""
+    },
+    "00005": {
+      "title": "3D printer",
+      "description": "",
+      "fullName": "Ender 2",
+      "subTools": [""],
+      "bothFrom": {
+        "store": "",
+        "price": ""
+      },
+      "state": {
+        "value": "",
+        "needReplace": "",
+        "mods": "",
+        "consumabile": ""
+      },
+      "ExteralLink": "",
+      "note": "",
+      "monthlyUse": ""
+    }
+  }
+}
