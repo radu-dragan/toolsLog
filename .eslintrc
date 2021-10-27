@@ -17,8 +17,9 @@
     "react/jsx-fragments": "off",
     "import/prefer-default-export": "off",
     "react/prop-types": "off",
-    "comma-dangle": ["error", "always-multiline"],
-    "react/jsx-props-no-spreading": "off"
+    "comma-dangle": ["off"],
+    "react/jsx-props-no-spreading": "off",
+    "no-case-declarations": "off"
   },
   "overrides": [
     {

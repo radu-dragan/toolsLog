@@ -1,17 +1,20 @@
 import React, { Fragment } from 'react'
+import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { ItemFactory } from '../components/ToolItemFactoryFunction'
-import { retriveTool } from '../components/toolWorker'
+import { selectTool } from '../components/toolWorker'
 
-const toolData = require('../toolData/tools.json')
+// const toolData = require('../toolData/tools.json')
 
 interface ToolPath {
   toolId: string
 }
 export const ToolID: React.FC = () => {
+  const storeData = useSelector((state) => state)
   const { toolId } = useParams<ToolPath>()
-  const toolDataRaw = retriveTool(toolId, toolData)
+  const toolDataRaw = selectTool(toolId, storeData)
 
+  // console.log("toolStore",storeData)
   return (
     <Fragment>
       <h1>{toolDataRaw.title}</h1>
@@ -20,7 +23,6 @@ export const ToolID: React.FC = () => {
       <dl className="row">
         {Object.keys(toolDataRaw).map((key) => (
           <Fragment key={key}>
-            <dt className="font-weight-bold" >{key}</dt>
             <ItemFactory cardData={toolDataRaw[key]} title={key} />
           </Fragment>
         ))}

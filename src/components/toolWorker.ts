@@ -1,3 +1,5 @@
+import _ from 'lodash'
+
 export const flatTolls = (allTools: any) => {
   const list: string[] = []
   Object.keys(allTools).forEach((key) => {
@@ -9,7 +11,12 @@ export const flatTolls = (allTools: any) => {
   return list
 }
 
-export const retriveTool = (id: string, data: any) => {
+export const selectTool = (id: string, data: any) => {
   const idRaw = id.split('-')
-  return data[idRaw[0]][idRaw[1]]
+  return _.get(data, `[${idRaw[0]}][${idRaw[1]}]`)
+}
+
+export const selectToolTitle = (id: string, data: any) => {
+  const idRaw = selectTool(id, data)
+  return _.get(idRaw, 'title', null)
 }

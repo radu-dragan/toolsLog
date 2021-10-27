@@ -1,9 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-// import { Navbar } from './components/Navbar'
-import { About } from './pages/About'
-import { Home } from './pages/Home'
 import { LandingTool } from './pages/LandingTool'
 import { ToolID } from './pages/ToolItemPage'
 
@@ -17,9 +14,6 @@ const App: React.FC = () => {
       {/* <Navbar /> */}
       <div className="container">
         <Switch>
-          <Route path="/old" component={Home} exact />
-          <Route path="/about" component={About} />
-
           <Route path="/:toolId/" component={ToolID} />
           <Route path="/" exact>
             <LandingTool data={toolData} />

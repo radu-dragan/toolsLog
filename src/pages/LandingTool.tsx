@@ -1,26 +1,36 @@
 import React, { Fragment } from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { flatTolls } from '../components/toolWorker'
+import { flatTolls, selectToolTitle } from '../components/toolWorker'
+// import { selectToolData } from '../store/selector'
 
 interface SuperProps {
   data?: any
 }
 
-export const LandingTool: React.FC<SuperProps> = (props) => {
-  const { data } = props
+export const LandingTool: React.FC<SuperProps> = () => {
+  const storeData = useSelector((state) => state)
+  const toolTest = flatTolls(storeData)
+  // const { data } = props
 
-  const toolsList = flatTolls(data)
+  // const toolsList = flatTolls(data)
   // generate title function
-  console.log(data)
+  // console.log("store", toolTest)
 
   return (
     <Fragment>
       <h1>Tool Warehouse</h1>
-      {toolsList.map((key) => (
-        <Link key={key} to={key}>
-          <h2>{key} | {data[key.split("-")[0]][key.split("-")[1]]?.title}</h2>
-        </Link>
-      ))}
+      <ul className="list-group list-group-flush">
+        {toolTest.map((key) => (
+          <li className="list-group-item">
+            <Link key={key} to={key} className="link-unstyled">
+              {[key, selectToolTitle(key, storeData)]
+                .filter((x) => x)
+                .join(' | ')}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </Fragment>
   )
 }
