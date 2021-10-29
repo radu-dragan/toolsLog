@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { flatTolls, selectToolTitle } from '../components/toolWorker'
@@ -13,9 +13,9 @@ export const LandingTool: React.FC<SuperProps> = () => {
   const toolTest = flatTolls(storeData)
   // const { data } = props
 
-  // const toolsList = flatTolls(data)
-  // generate title function
-  // console.log("store", toolTest)
+  useEffect(() => {
+    document.title = 'Tool WareHouse'
+  }, [])
 
   return (
     <Fragment>

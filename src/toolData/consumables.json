@@ -1,5 +1,27 @@
 {
-    "C" : {
-        "001" : "X"
+  "CX": {
+    "001": {
+      "title": "Hot Glue Gun Sticks Transparent",
+      "size": "Large?",
+      "exteralLink": "",
+      "note": "",
+      "purchaseDate": "2021",
+      "bothFrom": {
+        "store": "BricoDepo Bucuresti",
+        "price": "10 E",
+        "quantity": "1kg"
+      }
+    },
+    "002": {
+      "title": "Cutting Matt",
+      "size": "Large?",
+      "exteralLink": "",
+      "note": "",
+      "purchaseDate": "2021",
+      "bothFrom": {
+        "store": "Emag",
+        "price": "10 E"
+      }
     }
+  }
 }

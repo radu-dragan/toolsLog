@@ -1,0 +1,19 @@
+{
+  "X": {
+    "001": {
+      "title": "Birou Polite"
+    },
+    "002": {
+      "title": "Birou Peagboard"
+    }
+  },
+
+  "Z": {
+    "001": {
+      "title": "Decathlon 30 L"
+    },
+    "010": {
+      "title": "Hard Case"
+    }
+  }
+}

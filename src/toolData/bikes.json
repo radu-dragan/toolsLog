@@ -7,7 +7,8 @@
       "weight": "",
       "EaseOfUse": "1",
       "trainSafe": "",
-      "expectedSpeed": ""
+      "expectedSpeed": "",
+      "media": {"pinterest": "509680882819900768", "orientation": "H" }
     },
     "02": {
       "title": "Triban RC 500",
@@ -16,7 +17,8 @@
       "weight": "",
       "EaseOfUse": "3",
       "trainSafe": "",
-      "expectedSpeed": ""
+      "expectedSpeed": "",
+      "media": {"pinterest": "509680882819900768", "orientation": "H" }
     },
     "03": {
       "title": "BagFiets",
@@ -25,7 +27,8 @@
       "weight": "",
       "EaseOfUse": "2",
       "trainSafe": "",
-      "expectedSpeed": ""
+      "expectedSpeed": "",
+      "media": {"pinterest": "509680882819900768", "orientation": "H" }
     },
     "04": {
       "title": "Rocketa Alb pliabil",
@@ -34,7 +37,8 @@
       "weight": "",
       "EaseOfUse": "0",
       "trainSafe": "",
-      "expectedSpeed": ""
+      "expectedSpeed": "",
+      "media": {"pinterest": "509680882819900768", "orientation": "H" }
     },
     "05": {
       "title": "Pegas Hoinar",
@@ -43,7 +47,8 @@
       "weight": "",
       "EaseOfUse": "1",
       "trainSafe": "",
-      "expectedSpeed": ""
+      "expectedSpeed": "",
+      "media": {"pinterest": "509680882819900768", "orientation": "H" }
     },
     "06": {
       "title": "Brompton",
@@ -52,7 +57,8 @@
       "weight": "",
       "EaseOfUse": "1",
       "trainSafe": "",
-      "expectedSpeed": ""
+      "expectedSpeed": "",
+      "media": {"pinterest": "509680882819900768", "orientation": "H" }
     },
     "07": {
       "title": "CutomFrame Fixie",
@@ -61,7 +67,8 @@
       "weight": "",
       "EaseOfUse": "3",
       "trainSafe": "",
-      "expectedSpeed": ""
+      "expectedSpeed": "",
+      "media": {"pinterest": "509680882819900768", "orientation": "H" }
     }
   }
 }

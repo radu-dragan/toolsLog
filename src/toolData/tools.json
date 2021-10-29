@@ -1,13 +1,13 @@
 {
   "A": {
-    "00001": {
+    "01": {
       "title": "SOCKET & RATCHET DRIVE SET",
       "description": "",
       "fullName": "Powerfix Profi SOCKET & RATCHET DRIVE SET ",
       "subTools": ["RATCHET DRIVE 1/4", "16mm 60mm"],
       "bothFrom": {
         "store": "Lidle Romania Bucuresti",
-        "price": "15 Euro"
+        "price": "15 E"
       },
       "state": {
         "value": "",
@@ -15,47 +15,17 @@
         "mods": "",
         "consumabile": ""
       },
-      "ExteralLink": "http://offers.kd2.org/en/ie/lidl/pfJWt/",
+      "exteralLink": "http://offers.kd2.org/en/ie/lidl/pfJWt/",
       "note": "This is the most Important tool i have",
-      "monthlyUse": "10"
-    },
-    "00002": {
-      "title": "Hot Glue Gun",
-      "description": "",
-      "fullName": "",
-      "subTools": [""],
-      "bothFrom": {
-        "store": "",
-        "price": ""
+      "purchaseDate": "2010",
+      "size": "",
+      "weight": "",
+      "score": {
+        "FrequencyOfUse" : "100",
+        "Importance" : "100",
+        "indispensability": "100"
       },
-      "state": {
-        "value": "",
-        "needReplace": "",
-        "mods": "",
-        "consumabile": ""
-      },
-      "ExteralLink": "",
-      "note": "",
-      "monthlyUse": ""
-    },
-    "00003": {
-      "title": "Label Maker",
-      "description": "",
-      "fullName": "Brother P-touch H105",
-      "subTools": [""],
-      "bothFrom": {
-        "store": "",
-        "price": ""
-      },
-      "state": {
-        "value": "",
-        "needReplace": "",
-        "mods": "",
-        "consumabile": ""
-      },
-      "ExteralLink": "",
-      "note": "",
-      "monthlyUse": ""
+      "storage": "X001"
     },
     "00004": {
       "title": "Keys 7x",
@@ -72,9 +42,241 @@
         "mods": "",
         "consumabile": ""
       },
-      "ExteralLink": "",
+      "exteralLink": "",
       "note": "",
-      "monthlyUse": ""
+      "purchaseDate": ""
+    },
+
+    "60": {
+      "title": "Aspirator",
+      "fullName": "Einhel",
+      "storage": "X001"
+    },
+    "61": {
+      "title": "Cleste desertizat",
+      "storage": "X001"
+    },
+    "62": {
+      "title": "MultiToolCard",
+      "storage": "X001"
+    },
+    "63": {
+      "title": "Mini Burghiu",
+      "storage": "X002"
+    },
+    "64": {
+      "title": "Pila triunghiulara",
+      "storage": "X002"
+    },
+    "65": {
+      "title": "Zencuitor",
+      "storage": "X002"
+    },
+    "66": {
+      "title": "Master link Pliars",
+      "fullName": "Btwin",
+      "storage": "X002"
+    },
+    "67": {
+      "title": "Micro Multi Tool",
+      "storage": "X002"
+    },
+    "68": {
+      "title": "Cutter Blue",
+      "storage": "X002"
+    },
+    "69": {
+      "title": "Cutter Yellow",
+      "storage": "X002"
+    },
+    "70": {
+      "title": "Bormasina",
+      "storage": "X001"
+    },
+    "71": {
+      "title": "Drill Wood",
+      "storage": "X002"
+    },
+    "72": {
+      "title": "Drill Metal",
+      "storage": "X002"
+    },
+    "73": {
+      "title": "Level for roape",
+      "storage": "X002"
+    },
+    "74": {
+      "title": "Ruleta",
+      "storage": "X002"
+    },
+    "75": {
+      "title": "Multitool",
+      "fullName": "Btwin",
+      "storage": "X002"
+    },
+    "76": {
+      "title": "Protractor",
+      "fullName": "Stainless Steal",
+      "storage": "X002"
+
+    },
+    "77": {
+      "title": "Parkside Angle Finder",
+      "fullName": "Parkside Angle Finder",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Kaufland Romania",
+        "price": "8.5 E"
+      }
+    },
+    "78": {
+      "title": "Metalic Cutting Ruler",
+      "fullName": "Transotype Non-Slip Cutting Ruler 30 cm Red",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Kaufland Romania",
+        "price": "8.5 E"
+      }
+    },
+    "79": {
+      "title": "Precison screwdrivers",
+      "fullName": "Dexter",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Kaufland Romania",
+        "price": "10 E"
+      }
+    },
+    "80": {
+      "title": "Hot Glue Gun",
+      "description": "",
+      "fullName": "Steinel gluematic 3002",
+      "subTools": [""],
+      "bothFrom": {
+        "store": "Hornbach Bucuresti",
+        "price": "20 E"
+      },
+      "state": {
+        "value": "5 E",
+        "needReplace": "",
+        "mods": "",
+        "damage": ["heat shield nozzle"],
+        "repairs": ["heat shild nozzle", "1/2021"]
+      },
+      "exteralLink": "",
+      "note": "I think i would like it to be cordLess, but not sure",
+      "purchaseDate": "2012",
+      "usesConsumable": ["CX0001"],
+      "size": "",
+      "weight": "",
+      "power": "220V",
+      "score": {
+        "FrequencyOfUse" : "100",
+        "Importance" : "100",
+        "indispensability": "100"
+      },
+      "storage": "X002"
+    },
+    "81": {
+      "title": "Label Maker",
+      "description": "",
+      "fullName": "Brother P-touch H105",
+      "subTools": [""],
+      "bothFrom": {
+        "store": "Lidle Romania",
+        "price": "14 E"
+      },
+      "state": {
+        "value": "",
+        "needReplace": "",
+        "mods": "",
+        "consumabile": ""
+      },
+      "exteralLink": "",
+      "note": "",
+      "purchaseDate": "",
+      "usesConsumable": ["CX0001"],
+      "size": "",
+      "weight": "",
+      "power": "4AA",
+      "score": {
+        "FrequencyOfUse" : "100",
+        "Importance" : "100",
+        "indispensability": "100"
+      },
+      "storage": "X002"
+    },
+    "82": {
+      "title": "Precison screwdrivers",
+      "fullName": "23PC Bits Precision Driver set",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Kaufland Romania",
+        "price": "10 E"
+      }
+    },
+    "83": {
+      "title": "Luggage scale & small measure tape",
+      "fullName": "",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "",
+        "price": "10 E"
+      }
+    },
+    "84": {
+      "title": "Scissors",
+      "fullName": "CAPERLAN C900 Titanium Fishing scissors",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Decathlon",
+        "price": "15 E"
+      }
+    },
+    "85": {
+      "title": "Small Wrachet",
+      "fullName": "Parkside small wrachet",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Liddle"
+      }
+    },
+    "86": {
+      "title": "Battery Tester",
+      "fullName": "BT-168",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "RoboFun"
+      }
+    },
+    "87": {
+      "title": "Batery Pack Car jumper",
+      "fullName": "Einhell ICE-JS 12",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Emag"
+      }
+    },
+    "88": {
+      "title": "Pry Bar nail puller",
+      "fullName": "Magnusus 8\" Pry Bar & nail puller",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Brico Depo"
+      }
+    },
+    "89": {
+      "title": "Bottle opener nail puller",
+      "fullName": "",
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Jumbo Romania"
+      }
+    },
+    "90": {
+      "title": "Right Angle",
+      "fullName": "Wolfcraft 5205",
+      "storage": "X002"
     },
     "00005": {
       "title": "3D printer",
@@ -91,9 +293,9 @@
         "mods": "",
         "consumabile": ""
       },
-      "ExteralLink": "",
+      "exteralLink": "",
       "note": "",
-      "monthlyUse": ""
+      "purchaseDate": ""
     }
   }
 }
