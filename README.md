@@ -1,6 +1,26 @@
 # ToolWarehouse 
-Name Pending
 
-#TODO Name This Shait
-#TODO Cleanup Files
-#TODO Make a README.md
+
+# ID Structure
+
+| Category      | ID        | regex     |
+| ---           | ---       | ---       |
+| Tool          | A00       |           |
+| Tool          | B00       |           |
+| Bike          | BK00      |           |
+| Consumable    | CX0000     |           |
+| Lock Key      | L00       |           |
+| Storage - Fix | X00       |           |
+| Storage - Mob | Z00       |           |
+
+# Structure Of tools
+
+```JSON
+"ID":{
+  "00": {
+    "title": "Tool Name",
+    "fullName": "Maker 2000 Model Super Deluxe",
+    "storage": "X001"
+  }
+}
+```
