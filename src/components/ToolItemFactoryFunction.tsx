@@ -1,6 +1,13 @@
 import _ from 'lodash'
 import React from 'react'
 
+const formatTitle = (string: string) => {
+  let self: string = string
+  self = self.replaceAll(/([a-z])([A-Z])/g, '$1 $2')
+  self = self.charAt(0).toUpperCase() + self.slice(1)
+  return self
+}
+
 const Line: React.FC<{ title: string; show?: boolean }> = (props) => {
   const { title, children, show = true } = props
 
@@ -9,7 +16,7 @@ const Line: React.FC<{ title: string; show?: boolean }> = (props) => {
   }
   return (
     <>
-      <dt className="font-weight-bold">{title}</dt>
+      <dt className="font-weight-bold">{formatTitle(title)}</dt>
       {children}
     </>
   )
@@ -30,6 +37,7 @@ export const ItemFactory: React.FC<{
           <p>{props.cardData}</p>
         </Line>
       )
+    case 'category':
     case 'subTools':
       return (
         <Line title={props.title} show={!!props.cardData}>

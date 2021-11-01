@@ -2,6 +2,7 @@
   "A": {
     "01": {
       "title": "SOCKET & RATCHET DRIVE SET",
+      "category": ["SOCKET", "RATCHET", "Bits", "screwdriver"],
       "description": "Main socket set i have i use it for everything",
       "fullName": "Powerfix Profi SOCKET & RATCHET DRIVE SET ",
       "subTools": [
@@ -78,7 +79,7 @@
       },
       "storage": "X001"
     },
-    "00004": {
+    "04": {
       "title": "Keys 7x",
       "description": "",
       "fullName": "Brother P-touch H105",
@@ -328,7 +329,7 @@
       "fullName": "Wolfcraft 5205",
       "storage": "X002"
     },
-    "00005": {
+    "05": {
       "title": "3D printer",
       "description": "",
       "fullName": "Ender 2",
