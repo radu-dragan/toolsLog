@@ -13,7 +13,8 @@ export const ToolID: React.FC = () => {
   const storeData = useSelector((state) => state)
   const { toolId } = useParams<ToolPath>()
   const toolDataRaw = selectTool(toolId, storeData)
-  // const offset:number = 12
+  const placeholder = toolDataRaw.pinterest
+  const offset: number = placeholder ? 4 : 0
 
   useEffect(() => {
     document.title = [toolDataRaw.title, toolId].join(' | ')
@@ -21,21 +22,33 @@ export const ToolID: React.FC = () => {
 
   return (
     <Fragment>
-      <h1 className="offset-md-4">{toolDataRaw.title}</h1>
-      <h2 className="offset-md-4">{toolId}</h2>
+      <div
+        className="AddBtn"
+        onKeyPress={() => {}}
+        role="button"
+        tabIndex={0}
+        onClick={() => {
+          console.log('Add Redux 2')
+        }}
+      >
+        +
+      </div>
+      <h1 className={`offset-md-${offset}`}>{toolDataRaw.title}</h1>
+      <h2 className={`offset-md-${offset}`}>{toolId}</h2>
       <div className="row">
-        <hr />
+        <hr className="mt-5 mb-5" />
 
-        <div className="col-4">
-          <iframe
-            title="This is a unique title"
-            src="https://assets.pinterest.com/ext/embed.html?id=509680882819900768"
-            height="616"
-            width="345"
-            scrolling="no"
-          />
-        </div>
-        <dl className="col-8">
+        {!!placeholder && (
+          <div className={`col-${offset} iframe-container`}>
+            <iframe
+              title="This is a unique title"
+              src={`https://assets.pinterest.com/ext/embed.html?id=${placeholder}`}
+              scrolling="no"
+            />
+          </div>
+        )}
+
+        <dl className={`col-${12 - offset}`}>
           {Object.keys(toolDataRaw).map((key) => (
             <Fragment key={key}>
               <ItemFactory cardData={toolDataRaw[key]} title={key} />

@@ -1,7 +1,13 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { flatTolls, selectToolTitle } from '../components/toolWorker'
+import {
+  flatSubTools,
+  flatTolls,
+  fullPrice,
+  selectToolTitle,
+} from '../components/toolWorker'
+import { DT } from './_scafolding'
 // import { selectToolData } from '../store/selector'
 
 interface SuperProps {
@@ -10,7 +16,8 @@ interface SuperProps {
 
 export const LandingTool: React.FC<SuperProps> = () => {
   const storeData = useSelector((state) => state)
-  const toolTest = flatTolls(storeData)
+  const tools = flatTolls(storeData)
+  const subTools = flatSubTools(storeData)
   // const { data } = props
 
   useEffect(() => {
@@ -18,10 +25,10 @@ export const LandingTool: React.FC<SuperProps> = () => {
   }, [])
 
   return (
-    <Fragment>
+    <div className="row">
       <h1>Tool Warehouse</h1>
-      <ul className="list-group list-group-flush">
-        {toolTest.map((key) => (
+      <ul className="list-group list-group-flush col-8">
+        {tools.map((key) => (
           <li key={key} className="list-group-item">
             <Link to={key} className="link-unstyled">
               {[key, selectToolTitle(key, storeData)]
@@ -31,6 +38,29 @@ export const LandingTool: React.FC<SuperProps> = () => {
           </li>
         ))}
       </ul>
-    </Fragment>
+      <div className="col-4">
+        <div>
+          <b>Sub Tools</b>
+          <hr />
+          {subTools.map((key) => (
+            <Link
+              to={`/subTool/${encodeURIComponent(key)}`}
+              className="link-unstyled"
+              key={key}
+            >
+              {key}&nbsp;&nbsp;&nbsp;
+            </Link>
+          ))}
+        </div>
+        <div className="mt-5">
+          <hr />
+          <dl className="row">
+            <DT title="Tools" value={tools.length.toString()} />
+            <DT title="Total Value" value={fullPrice(storeData)} />
+          </dl>
+          <hr />
+        </div>
+      </div>
+    </div>
   )
 }

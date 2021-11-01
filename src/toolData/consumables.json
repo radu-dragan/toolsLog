@@ -8,7 +8,7 @@
       "purchaseDate": "2021",
       "bothFrom": {
         "store": "BricoDepo Bucuresti",
-        "price": "10 E",
+        "price": "10",
         "quantity": "1kg"
       }
     },
@@ -20,7 +20,7 @@
       "purchaseDate": "2021",
       "bothFrom": {
         "store": "Emag",
-        "price": "10 E"
+        "price": "10"
       }
     }
   }

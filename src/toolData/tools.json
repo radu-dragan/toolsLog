@@ -68,13 +68,14 @@
         "consumabile": "-"
       },
       "exteralLink": "http://offers.kd2.org/en/ie/lidl/pfJWt/",
+      "pinterest": "821907000723176906",
       "note": "This is the most Important tool i have",
       "purchaseDate": "2010",
-      "size": "",
-      "weight": "",
+      "size": "24 x 18.5 x 5",
+      "weight": "1768",
       "score": {
-        "FrequencyOfUse": "100",
-        "Importance": "100",
+        "frequencyOfUse": "100",
+        "importance": "100",
         "indispensability": "100"
       },
       "storage": "X001"
@@ -177,7 +178,7 @@
       "storage": "X002",
       "bothFrom": {
         "store": "Kaufland Romania",
-        "price": "8.5 E"
+        "price": "8.5"
       }
     },
     "78": {
@@ -186,7 +187,7 @@
       "storage": "X002",
       "bothFrom": {
         "store": "Kaufland Romania",
-        "price": "8.5 E"
+        "price": "8.5"
       }
     },
     "79": {
@@ -195,7 +196,7 @@
       "storage": "X002",
       "bothFrom": {
         "store": "Kaufland Romania",
-        "price": "10 E"
+        "price": "10"
       }
     },
     "80": {
@@ -205,10 +206,10 @@
       "subTools": [""],
       "bothFrom": {
         "store": "Hornbach Bucuresti",
-        "price": "20 E"
+        "price": "20"
       },
       "state": {
-        "value": "5 E",
+        "value": "5",
         "needReplace": "",
         "mods": "",
         "damage": ["heat shield nozzle"],
@@ -235,7 +236,7 @@
       "subTools": [""],
       "bothFrom": {
         "store": "Lidle Romania",
-        "price": "14 E"
+        "price": "14"
       },
       "state": {
         "value": "",
@@ -263,7 +264,7 @@
       "storage": "X002",
       "bothFrom": {
         "store": "Kaufland Romania",
-        "price": "10 E"
+        "price": "10"
       }
     },
     "83": {
@@ -272,7 +273,7 @@
       "storage": "X002",
       "bothFrom": {
         "store": "",
-        "price": "10 E"
+        "price": "10"
       }
     },
     "84": {
@@ -281,7 +282,7 @@
       "storage": "X002",
       "bothFrom": {
         "store": "Decathlon",
-        "price": "15 E"
+        "price": "15"
       }
     },
     "85": {
