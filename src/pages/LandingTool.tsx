@@ -22,8 +22,8 @@ export const LandingTool: React.FC<SuperProps> = () => {
       <h1>Tool Warehouse</h1>
       <ul className="list-group list-group-flush">
         {toolTest.map((key) => (
-          <li className="list-group-item">
-            <Link key={key} to={key} className="link-unstyled">
+          <li key={key} className="list-group-item">
+            <Link to={key} className="link-unstyled">
               {[key, selectToolTitle(key, storeData)]
                 .filter((x) => x)
                 .join(' | ')}

@@ -2,18 +2,69 @@
   "A": {
     "01": {
       "title": "SOCKET & RATCHET DRIVE SET",
-      "description": "",
+      "description": "Main socket set i have i use it for everything",
       "fullName": "Powerfix Profi SOCKET & RATCHET DRIVE SET ",
-      "subTools": ["RATCHET DRIVE 1/4", "16mm 60mm"],
+      "subTools": [
+        "Adaptor 1/2 to 1/4",
+        "Adaptor 1/4 to 1/2",
+        "Adaptor 1/4 to hex bits 1/4",
+        "Bits hex 3",
+        "Bits hex 4",
+        "Bits hex 5",
+        "Bits hex 6",
+        "Bits Torx T10",
+        "Bits Torx T15",
+        "Bits Torx T20",
+        "Bits Torx T25",
+        "Bits Torx T27",
+        "Bits Torx T30",
+        "Bits Torx T40",
+        "Bits Slot 6",
+        "Bits Slot 5",
+        "Bits Slot 4",
+        "Bits Slot 3",
+        "Bits Pozidrive 3",
+        "Bits Pozidrive 2",
+        "Bits Pozidrive 2",
+        "Bits Pozidrive 1",
+        "Bits Philips 3",
+        "Bits Philips 2",
+        "Bits Philips 2",
+        "Bits Philips 1",
+        "Extension 1/4\"",
+        "Magnet pen telescopic",
+        "RATCHET DRIVE 1/4\"",
+        "ScrewDriver 1/2\"",
+        "Socket 10mm 1/4\"",
+        "Socket 11mm 1/2\"",
+        "Socket 11mm 1/4\"",
+        "Socket 12mm 1/2\"",
+        "Socket 13mm 1/2\"",
+        "Socket 14mm 1/2\"",
+        "Socket 15mm 1/2\"",
+        "Socket 16mm 1/2\" deep",
+        "Socket 16mm 1/2\"",
+        "Socket 17mm 1/2\"",
+        "Socket 18mm 1/2\"",
+        "Socket 19mm 1/2\"",
+        "Socket 4.5mm 1/4\"",
+        "Socket 4mm 1/4\"",
+        "Socket 5.5mm 1/4\"",
+        "Socket 5mm 1/4\"",
+        "Socket 6mm 1/4\"",
+        "Socket 7mm 1/4\"",
+        "Socket 8mm 1/4\"",
+        "Socket 9mm 1/4\""
+      ],
       "bothFrom": {
         "store": "Lidle Romania Bucuresti",
-        "price": "15 E"
+        "price": "15"
       },
       "state": {
-        "value": "",
-        "needReplace": "",
-        "mods": "",
-        "consumabile": ""
+        "value": "10",
+        "needReplace": "-",
+        "mods": "-",
+        "consumabile": "-"
       },
       "exteralLink": "http://offers.kd2.org/en/ie/lidl/pfJWt/",
       "note": "This is the most Important tool i have",
@@ -21,8 +72,8 @@
       "size": "",
       "weight": "",
       "score": {
-        "FrequencyOfUse" : "100",
-        "Importance" : "100",
+        "FrequencyOfUse": "100",
+        "Importance": "100",
         "indispensability": "100"
       },
       "storage": "X001"
@@ -118,7 +169,6 @@
       "title": "Protractor",
       "fullName": "Stainless Steal",
       "storage": "X002"
-
     },
     "77": {
       "title": "Parkside Angle Finder",
@@ -171,8 +221,8 @@
       "weight": "",
       "power": "220V",
       "score": {
-        "FrequencyOfUse" : "100",
-        "Importance" : "100",
+        "FrequencyOfUse": "100",
+        "Importance": "100",
         "indispensability": "100"
       },
       "storage": "X002"
@@ -200,8 +250,8 @@
       "weight": "",
       "power": "4AA",
       "score": {
-        "FrequencyOfUse" : "100",
-        "Importance" : "100",
+        "FrequencyOfUse": "100",
+        "Importance": "100",
         "indispensability": "100"
       },
       "storage": "X002"

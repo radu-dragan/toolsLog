@@ -8,7 +8,7 @@ export const flatTolls = (allTools: any) => {
     })
     return null
   })
-  return list
+  return list.sort()
 }
 
 export const selectTool = (id: string, data: any) => {

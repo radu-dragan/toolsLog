@@ -13,7 +13,7 @@ export const ToolID: React.FC = () => {
   const storeData = useSelector((state) => state)
   const { toolId } = useParams<ToolPath>()
   const toolDataRaw = selectTool(toolId, storeData)
-  const offset:number = 12
+  // const offset:number = 12
 
   useEffect(() => {
     document.title = [toolDataRaw.title, toolId].join(' | ')
