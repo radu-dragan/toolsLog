@@ -35,6 +35,22 @@ export const flatSubTools = (allTools: any) => {
   return list
 }
 
+export const storedgeTools = (allTools: any) => {
+  let list: string[] = []
+  Object.values(allTools).forEach((v1: any) => {
+    Object.values(v1).forEach((v2: any) => {
+      if (v2.storage) {
+        list.push(v2.storage)
+      }
+    })
+  })
+
+
+  list = _.sortedUniq(list.sort()).filter((x) => !!x)
+  console.log(list)
+  return list
+}
+
 export const fullPrice = (allTools: any) => {
   let total = 0
   Object.values(allTools).forEach((v1: any) => {

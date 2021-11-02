@@ -6,6 +6,7 @@ import {
   flatTolls,
   fullPrice,
   selectToolTitle,
+  storedgeTools,
 } from '../components/toolWorker'
 import { DT } from './_scafolding'
 // import { selectToolData } from '../store/selector'
@@ -18,6 +19,7 @@ export const LandingTool: React.FC<SuperProps> = () => {
   const storeData = useSelector((state) => state)
   const tools = flatTolls(storeData)
   const subTools = flatSubTools(storeData)
+  const storadge = storedgeTools(storeData)
   // const { data } = props
 
   useEffect(() => {
@@ -43,6 +45,19 @@ export const LandingTool: React.FC<SuperProps> = () => {
           <b>Sub Tools</b>
           <hr />
           {subTools.map((key) => (
+            <Link
+              to={`/subTool/${encodeURIComponent(key)}`}
+              className="link-unstyled"
+              key={key}
+            >
+              {key}&nbsp;&nbsp;&nbsp;
+            </Link>
+          ))}
+        </div>
+        <div className="mt-5">
+          <b>Storage</b>
+          <hr />
+          {storadge.map((key) => (
             <Link
               to={`/subTool/${encodeURIComponent(key)}`}
               className="link-unstyled"

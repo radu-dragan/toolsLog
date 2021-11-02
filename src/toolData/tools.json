@@ -99,7 +99,57 @@
       "note": "",
       "purchaseDate": ""
     },
-
+    "55": {
+      "title": "Needle-nose pliers",
+      "fullName": "Parkside Needle-nose pliers",
+      "storage": "X002"
+    },
+    "56": {
+      "title": "Cutting Pliers",
+      "fullName": "Generic diagonal cutting pliers",
+      "storage": "X002"
+    },
+    "57": {
+      "title": "Combination Pliers",
+      "fullName": "Generic combination pliers",
+      "storage": "X002"
+    },
+    "58": {
+      "title": "Pliars SoftJaw Knipex",
+      "fullName": "Knipex 8111250 Siphon Pliers 250mm",
+      "category": ["Pliers", "Water pump pliers", "Soft jaw pliers"],
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Amazon",
+        "price": "50"
+      },
+      "state": {
+        "value": "50"
+      },
+      "exteralLink": "https://www.knipex.com/products/pipe-wrenches-and-water-pump-pliers/siphon-and-connector-pliers-for-traps-tube-fittings-and-connectors/siphon-and-connector-pliersfor-traps-tube-fittings-and-connectors/8113250",
+      "purchaseDate": "2021",
+      "size": "25 x 6 x 1.5",
+      "weight": "347",
+      "pinterest":"1120270476028257014"
+    },
+    "59": {
+      "title": "Pliers Knipex",
+      "fullName": "Knipex Cobra 8701 Vanadin 250mm",
+      "category": ["Pliers", "Water pump pliers"],
+      "storage": "X002",
+      "bothFrom": {
+        "store": "Amazon",
+        "price": "20"
+      },
+      "state": {
+        "value": "20"
+      },
+      "exteralLink": "https://www.knipex.com/products/pipe-wrenches-and-water-pump-pliers/knipex-cobra-high-tech-water-pump-pliers/knipex-cobrahigh-tech-water-pump-pliers/8701250",
+      "purchaseDate": "2021",
+      "size": "25 x 6 x 1.5",
+      "weight": "332",
+      "pinterest": "643311127993168005"
+    },
     "60": {
       "title": "Aspirator",
       "fullName": "Einhel",
