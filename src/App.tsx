@@ -6,18 +6,16 @@ import { StorePage } from './pages/StorePage'
 import { SubTool } from './pages/SubTool'
 import { ToolID } from './pages/ToolItemPage'
 
-const toolData = require('./toolData/tools.json')
-
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <div className="container">
         <Switch>
-          <Route path="/subTool/:toolId/" component={SubTool} />
-          <Route path="/store/:toolId/" component={StorePage} />
+          <Route path="/subTools/:toolId/" component={SubTool} />
+          <Route path="/storage/:toolId/" component={StorePage} />
           <Route path="/:toolId/" component={ToolID} />
           <Route path="/" exact>
-            <LandingTool data={toolData} />
+            <LandingTool />
           </Route>
         </Switch>
       </div>

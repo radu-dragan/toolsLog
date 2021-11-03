@@ -58,7 +58,18 @@ export const ItemFactory: React.FC<{
     case 'subTools':
       return (
         <Line title={props.title} show={!!props.cardData}>
-          <p>{_.get(props, 'cardData', []).join(' | ')}</p>
+          <p>
+            {_.get(props, 'cardData', []).map((key: string) => (
+              <Link
+                to={`/${props.title}/${encodeURIComponent(key)}`}
+                className="link-unstyled"
+                key={key}
+              >
+                {key}&nbsp;|&nbsp;
+              </Link>
+            ))}
+          </p>
+          {/* <p>{_.get(props, 'cardData', []).join(' | ')}</p> */}
         </Line>
       )
     case 'state':

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {
   flatSubTools,
-  flatTolls,
+  // flatTolls,
   fullPrice,
   selectToolTitle,
   storedgeTools,
@@ -11,16 +11,12 @@ import {
 import { DT } from './_scafolding'
 // import { selectToolData } from '../store/selector'
 
-interface SuperProps {
-  data?: any
-}
 
-export const LandingTool: React.FC<SuperProps> = () => {
+export const LandingTool: React.FC = () => {
   const storeData = useSelector((state) => state)
-  const tools = flatTolls(storeData)
+  const { allTools } = useSelector((state) => state) as any
   const subTools = flatSubTools(storeData)
   const storadge = storedgeTools(storeData)
-  // const { data } = props
 
   useEffect(() => {
     document.title = 'Tool WareHouse'
@@ -30,7 +26,7 @@ export const LandingTool: React.FC<SuperProps> = () => {
     <div className="row">
       <h1>Tool Warehouse</h1>
       <ul className="list-group list-group-flush col-8">
-        {tools.map((key) => (
+        {allTools.map((key: string) => (
           <li key={key} className="list-group-item">
             <Link to={key} className="link-unstyled">
               {[key, selectToolTitle(key, storeData)]
@@ -46,7 +42,7 @@ export const LandingTool: React.FC<SuperProps> = () => {
           <hr />
           {subTools.map((key) => (
             <Link
-              to={`/subTool/${encodeURIComponent(key)}`}
+              to={`/subTools/${encodeURIComponent(key)}`}
               className="link-unstyled"
               key={key}
             >
@@ -70,7 +66,7 @@ export const LandingTool: React.FC<SuperProps> = () => {
         <div className="mt-5">
           <hr />
           <dl className="row">
-            <DT title="Tools" value={tools.length.toString()} />
+            <DT title="Tools" value={allTools.length.toString()} />
             <DT title="Total Value" value={fullPrice(storeData)} />
           </dl>
           <hr />

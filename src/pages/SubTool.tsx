@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { nothing } from '../components/devHelper'
-import { filterSubtools } from '../components/toolWorker'
+// import { filterSubtools } from '../components/toolWorker'
 
 interface SuperProps {
   data?: any
@@ -15,9 +15,10 @@ interface ToolPath {
 export const SubTool: React.FC<SuperProps> = () => {
   const storeData = useSelector((state) => state)
   const toolId = decodeURIComponent(useParams<ToolPath>().toolId)
-  const subToolList = filterSubtools({ subTool: toolId, allTools: storeData })
+  // const subToolList = filterSubtools({ subTool: toolId, allTools: storeData })
 
-  nothing(subToolList)
+  nothing(storeData)
+  // nothing(subToolList)
   return (
     <Fragment>
       <h1>SubTools</h1>
@@ -26,7 +27,7 @@ export const SubTool: React.FC<SuperProps> = () => {
         <hr />
 
         <div className="col-4">
-          {subToolList.map((key: string) => (
+          {/* {subToolList.map((key: string) => (
             <Link
               to={`../${encodeURIComponent(key)}`}
               className="link-unstyled"
@@ -34,7 +35,7 @@ export const SubTool: React.FC<SuperProps> = () => {
             >
               {key}&nbsp;
             </Link>
-          ))}
+          ))} */}
         </div>
       </div>
     </Fragment>
