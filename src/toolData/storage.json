@@ -1,10 +1,25 @@
 {
   "X": {
     "001": {
-      "title": "Birou Polite"
+      "title": "Office Ivar",
+      "type": "shelfs"
     },
     "002": {
-      "title": "Birou Peagboard"
+      "title": "Office Peagboard",
+      "color": "blue",
+      "type": "peagbord",
+      "details": {
+        "size": [2000, 900],
+        "Offsets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "extra": [[[10,10],[30,30]]]
+        },
+        "holeSize": 5,
+        "holeDistance": 8
+      }
     }
   },
 

@@ -1,7 +1,5 @@
 import _ from 'lodash'
-// import { useSelector } from 'react-redux'
 
-// const storeData = useSelector((state) => state)
 
 export const flatTolls = (allTools: any) => {
   const list: string[] = []

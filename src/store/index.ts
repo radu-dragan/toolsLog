@@ -5,8 +5,9 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 const tool = require('../toolData/tools.json')
 const consumables = require('../toolData/consumables.json')
 const bike = require('../toolData/bikes.json')
+const storage = require('../toolData/storage.json')
 
-const initialState = { ...tool, ...consumables, ...bike }
+const initialState = { ...tool, ...consumables, ...bike, ...storage }
 initialState.allTools = (() => {
   const list: string[] = []
   Object.keys(tool).forEach((key) => {

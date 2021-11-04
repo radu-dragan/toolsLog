@@ -78,7 +78,8 @@
         "importance": "100",
         "indispensability": "100"
       },
-      "storage": "X001"
+      "storage": "X-001",
+      "storagePosition": [2, 3]
     },
     "04": {
       "title": "Keys 7x",
@@ -102,23 +103,23 @@
     "55": {
       "title": "Needle-nose pliers",
       "fullName": "Parkside Needle-nose pliers",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "56": {
       "title": "Cutting Pliers",
       "fullName": "Generic diagonal cutting pliers",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "57": {
       "title": "Combination Pliers",
       "fullName": "Generic combination pliers",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "58": {
       "title": "Pliars SoftJaw Knipex",
       "fullName": "Knipex 8111250 Siphon Pliers 250mm",
       "category": ["Pliers", "Water pump pliers", "Soft jaw pliers"],
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Amazon",
         "price": "50"
@@ -136,7 +137,7 @@
       "title": "Pliers Knipex",
       "fullName": "Knipex Cobra 8701 Vanadin 250mm",
       "category": ["Pliers", "Water pump pliers"],
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Amazon",
         "price": "20"
@@ -153,79 +154,79 @@
     "60": {
       "title": "Aspirator",
       "fullName": "Einhel",
-      "storage": "X001"
+      "storage": "X-001"
     },
     "61": {
       "title": "Cleste desertizat",
-      "storage": "X001"
+      "storage": "X-001"
     },
     "62": {
       "title": "MultiToolCard",
-      "storage": "X001"
+      "storage": "X-001"
     },
     "63": {
       "title": "Mini Burghiu",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "64": {
       "title": "Pila triunghiulara",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "65": {
       "title": "Zencuitor",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "66": {
       "title": "Master link Pliars",
       "fullName": "Btwin",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "67": {
       "title": "Micro Multi Tool",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "68": {
       "title": "Cutter Blue",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "69": {
       "title": "Cutter Yellow",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "70": {
       "title": "Bormasina",
-      "storage": "X001"
+      "storage": "X-001"
     },
     "71": {
       "title": "Drill Wood",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "72": {
       "title": "Drill Metal",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "73": {
       "title": "Level for roape",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "74": {
       "title": "Ruleta",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "75": {
       "title": "Multitool",
       "fullName": "Btwin",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "76": {
       "title": "Protractor",
       "fullName": "Stainless Steal",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "77": {
       "title": "Parkside Angle Finder",
       "fullName": "Parkside Angle Finder",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Kaufland Romania",
         "price": "8.5"
@@ -234,7 +235,7 @@
     "78": {
       "title": "Metalic Cutting Ruler",
       "fullName": "Transotype Non-Slip Cutting Ruler 30 cm Red",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Kaufland Romania",
         "price": "8.5"
@@ -243,7 +244,7 @@
     "79": {
       "title": "Precison screwdrivers",
       "fullName": "Dexter",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Kaufland Romania",
         "price": "10"
@@ -277,7 +278,7 @@
         "Importance": "100",
         "indispensability": "100"
       },
-      "storage": "X002"
+      "storage": "X-002"
     },
     "81": {
       "title": "Label Maker",
@@ -306,12 +307,12 @@
         "Importance": "100",
         "indispensability": "100"
       },
-      "storage": "X002"
+      "storage": "X-002"
     },
     "82": {
       "title": "Precison screwdrivers",
       "fullName": "23PC Bits Precision Driver set",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Kaufland Romania",
         "price": "10"
@@ -320,16 +321,22 @@
     "83": {
       "title": "Luggage scale & small measure tape",
       "fullName": "",
-      "storage": "X002",
+      "storage": "X-002",
+      "weight": "113",
       "bothFrom": {
         "store": "",
         "price": "10"
+      },
+      "dimensions": {
+        "storage": "X-002",
+        "size": "90 x 170 x 40",
+        "position": [3,7]
       }
     },
     "84": {
       "title": "Scissors",
       "fullName": "CAPERLAN C900 Titanium Fishing scissors",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Decathlon",
         "price": "15"
@@ -338,7 +345,7 @@
     "85": {
       "title": "Small Wrachet",
       "fullName": "Parkside small wrachet",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Liddle"
       }
@@ -346,7 +353,7 @@
     "86": {
       "title": "Battery Tester",
       "fullName": "BT-168",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "RoboFun"
       }
@@ -354,23 +361,33 @@
     "87": {
       "title": "Batery Pack Car jumper",
       "fullName": "Einhell ICE-JS 12",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Emag"
       }
     },
     "88": {
       "title": "Pry Bar nail puller",
-      "fullName": "Magnusus 8\" Pry Bar & nail puller",
-      "storage": "X002",
+      "fullName": "Magnusus Pry Bar & nail puller",
       "bothFrom": {
-        "store": "Brico Depo"
+        "store": "Brico Depo",
+        "price": "3"
+      },
+      "state": {
+        "value": "1"
+      },
+      "weight": "144",
+      "pinterest": "167759154846550385",
+      "dimensions": {
+        "storage": "X-002",
+        "size": "210 x 60 x 40",
+        "position": [0,0]
       }
     },
     "89": {
       "title": "Bottle opener nail puller",
       "fullName": "",
-      "storage": "X002",
+      "storage": "X-002",
       "bothFrom": {
         "store": "Jumbo Romania"
       }
@@ -378,7 +395,7 @@
     "90": {
       "title": "Right Angle",
       "fullName": "Wolfcraft 5205",
-      "storage": "X002"
+      "storage": "X-002"
     },
     "05": {
       "title": "3D printer",

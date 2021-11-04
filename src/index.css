@@ -37,7 +37,8 @@ code {
 /* Pinterest */
 .iframe-container {
   overflow: hidden;
-  padding-top: 56.25%; /* 16:9*/
+  /*padding-top: 56.25%; /* 16:9*/
+  padding-top: 650px;
   position: relative;
 }
 
@@ -66,4 +67,9 @@ code {
   right: 50px;
   top: 50px;
   cursor: pointer;
+}
+
+/* peagboard */
+.svg-peagboard {
+  max-width: 100%;
 }

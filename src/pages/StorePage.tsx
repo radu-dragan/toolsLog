@@ -15,9 +15,7 @@ export const StorePage: React.FC = () => {
       <div className="row">
         <hr />
 
-        <div className="col-4">
-          X
-        </div>
+        <div className="col-4">X</div>
       </div>
     </Fragment>
   )

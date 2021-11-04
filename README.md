@@ -20,7 +20,7 @@
   "00": {
     "title": "Tool Name",
     "fullName": "Maker 2000 Model Super Deluxe",
-    "storage": "X001"
+    "storage": "X-001"
   }
 }
 ```
