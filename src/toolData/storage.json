@@ -20,6 +20,18 @@
         "holeSize": 5,
         "holeDistance": 8
       }
+    },
+    "003": {
+      "title": "LivingRoom",
+      "type": "Shelfs"
+    },
+    "004": {
+      "title": "Peagboard Garaj",
+      "type": "peagboard"
+    },
+    "005": {
+      "title": "Shelfs Garaj",
+      "type": "Shelfs"
     }
   },
 

@@ -1,3 +1,3 @@
-export const nothing = (something:any) => {
-    return something;
+export const nothing = (something: any) => {
+  return something
 }

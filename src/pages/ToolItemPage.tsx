@@ -15,7 +15,7 @@ export const ToolID: React.FC = () => {
   const storeData = useSelector((state) => state)
   const { toolId } = useParams<ToolPath>()
   const toolDataRaw = selectTool(toolId, storeData)
-  const placeholder = toolDataRaw.pinterest
+  const placeholder = toolDataRaw?.pinterest
   const offset: number = placeholder ? 4 : 0
 
   console.log(offset)

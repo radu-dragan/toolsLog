@@ -24,3 +24,11 @@
   }
 }
 ```
+
+
+#start proceducere
+```
+clone
+npm install
+yarn start
+```

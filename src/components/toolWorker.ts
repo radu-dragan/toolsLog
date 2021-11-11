@@ -1,6 +1,5 @@
 import _ from 'lodash'
 
-
 export const flatTolls = (allTools: any) => {
   const list: string[] = []
   Object.keys(allTools).forEach((key) => {
@@ -17,6 +16,28 @@ export const flatTolls = (allTools: any) => {
 export const selectTool = (id: string, data: any) => {
   const idRaw = id.split('-')
   return _.get(data, `[${idRaw[0]}][${idRaw[1]}]`)
+}
+
+export const selectByProp = ({
+  store,
+  propertie,
+  evaluator,
+}: {
+  store: any
+  propertie: string
+  evaluator: (e: any) => {}
+}) => {
+  const self: Array<any> = []
+  store.allTools.forEach((x: string) => {
+    const id = x.split('-')
+    const toolData = _.get(store, id.join('.'))
+    const toolPropData = _.get(toolData, propertie)
+    const evalStatement = evaluator(toolPropData)
+    if (evalStatement) {
+      self.push({ ...toolData, id: x })
+    }
+  })
+  return self
 }
 
 // TODO: 2 getTool (id, prop) replace
@@ -51,7 +72,6 @@ export const storedgeTools = (allTools: any) => {
       }
     })
   })
-
 
   list = _.sortedUniq(list.sort()).filter((x) => !!x)
   console.log(list)
