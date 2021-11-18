@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import { AddBar } from '../components/landing_page_bar'
 import { Peagboard } from '../components/peagboard'
 import { Pinterest } from '../components/pinterest'
 import { ItemFactory } from '../components/ToolItemFactoryFunction'
@@ -12,13 +13,13 @@ interface ToolPath {
   toolId: string
 }
 export const ToolID: React.FC = () => {
+  const dispatch = useDispatch()
   const storeData = useSelector((state) => state)
   const { toolId } = useParams<ToolPath>()
   const toolDataRaw = selectTool(toolId, storeData)
   const placeholder = toolDataRaw?.pinterest
   const offset: number = placeholder ? 4 : 0
 
-  console.log(offset)
 
   useEffect(() => {
     document.title = [toolDataRaw.title, toolId].join(' | ')
@@ -26,6 +27,7 @@ export const ToolID: React.FC = () => {
 
   return (
     <Fragment>
+      <AddBar />
       <div className="container">
         <div className="row">
           <div className="col">
@@ -34,9 +36,13 @@ export const ToolID: React.FC = () => {
               onKeyPress={() => {}}
               role="button"
               tabIndex={0}
-              onClick={() => {
-                console.log('Add Redux 2')
-              }}
+              data-qa="increment-counter"
+              onClick={() =>
+                dispatch({
+                  type: 'ADD_ITEM',
+                  text: { [toolId]: { id: toolId } },
+                })
+              }
             >
               +
             </div>
@@ -62,7 +68,10 @@ export const ToolID: React.FC = () => {
         <div className="row">
           <div className="col">
             <hr className="mt-5 mb-5" />
-            <Peagboard structure={toolDataRaw.dimensions} elementSize={toolDataRaw.dimensions} />
+            <Peagboard
+              structure={toolDataRaw.dimensions}
+              elementSize={toolDataRaw.dimensions}
+            />
           </div>
         </div>
       </div>

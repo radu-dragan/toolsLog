@@ -82,28 +82,65 @@
       "storagePosition": [2, 3]
     },
     "04": {
-      "title": "Keys 7x",
-      "description": "",
-      "fullName": "Brother P-touch H105",
-      "subTools": [""],
+      "title": "wrenches 6-19mm",
+      "category": ["wrenches", "fixed wrenches,", "open wrenches"],
+      "description": "Open ended wranches",
+      "fullName": "Go/on 7x open end wrench",
+      "subTools": [
+        "Open wrench 6-7mm", 
+        "Open wrench 8-9mm",
+        "Open wrench 10-11mm",
+        "Open wrench 12-13mm",
+        "Open wrench 14-15mm",
+        "Open wrench 16-17mm",
+        "Open wrench 18-19mm"
+      ],
       "bothFrom": {
-        "store": "",
-        "price": ""
+        "store": "Brico Depo",
+        "price": "2"
       },
       "state": {
-        "value": "",
-        "needReplace": "",
-        "mods": "",
-        "consumabile": ""
+        "value": "1",
+        "needReplace": "-",
+        "mods": "-",
+        "consumabile": "-"
       },
-      "exteralLink": "",
-      "note": "",
-      "purchaseDate": ""
+      "pinterest": "684195368398730602",
+      "note": "One of the first tools ever both",
+      "purchaseDate": "2013",
+      "size": "14 x 18.5 x 4",
+      "weight": "593",
+      "score": {
+        "frequencyOfUse": "70",
+        "importance": "80",
+        "indispensability": "80"
+      },
+      "storage": "X-001",
+      "storagePosition": [7, 25]
+
     },
     "55": {
       "title": "Needle-nose pliers",
       "fullName": "Parkside Needle-nose pliers",
-      "storage": "X-002"
+      "storage": "X-002",
+      "bothFrom": {
+        "store": "Lidle Romania Netherlands",
+        "price": "2"
+      },
+      "state": {
+        "value": "1"
+      },
+      "pinterest": "821907000723176906",
+      "note": "most commonly used pliars",
+      "purchaseDate": "2020",
+      "size": "18 x 5 x 2",
+      "weight": "180",
+      "score": {
+        "frequencyOfUse": "100",
+        "importance": "100",
+        "indispensability": "100"
+      },
+      "storagePosition": [40, 40]
     },
     "56": {
       "title": "Cutting Pliers",
@@ -131,7 +168,7 @@
       "purchaseDate": "2021",
       "size": "25 x 6 x 1.5",
       "weight": "347",
-      "pinterest":"1120270476028257014"
+      "pinterest": "1120270476028257014"
     },
     "59": {
       "title": "Pliers Knipex",
@@ -330,7 +367,7 @@
       "dimensions": {
         "storage": "X-002",
         "size": "90 x 170 x 40",
-        "position": [3,7]
+        "position": [3, 7]
       }
     },
     "84": {
@@ -381,7 +418,7 @@
       "dimensions": {
         "storage": "X-002",
         "size": "210 x 60 x 40",
-        "position": [0,0]
+        "position": [0, 0]
       }
     },
     "89": {
