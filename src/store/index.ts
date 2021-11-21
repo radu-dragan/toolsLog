@@ -1,3 +1,4 @@
+import _ from 'lodash'
 import { createStore } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 
@@ -29,7 +30,12 @@ const rootReducer = (state = initialState, action: any) => {
     case 'ADD_ITEM':
       return {
         ...state,
-        logTools: { ...state.logTools, ...action.text },
+        logTools: { ...state.logTools, ...action.item },
+      }
+    case 'REMOVE_ITEM':
+      return {
+        ...state,
+        logTools: _.omit(state.logTools, action.item),
       }
     // case 'countUP':
     //   return { ...state, value: state.value + 1 }

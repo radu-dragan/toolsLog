@@ -86,3 +86,35 @@ code {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Scaffolding */
+
+.container-back {
+  background: black;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  top: 50vh;
+  left: 0;
+}
+
+/* Requierd Page */
+.remove-btn {
+  background-color: lightgray;
+  color:white;
+  padding-left: 8px;
+  padding-right: 8px;
+  position: absolute;
+  right: 0;
+  border-radius: 100%;
+}
+
+/* sidebar */
+.sidebar-item .pull-right {
+  float: right;
+}
+
+.sidebar-item + .sidebar-item {
+  margin-top: 20px;
+}

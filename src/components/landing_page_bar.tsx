@@ -12,8 +12,8 @@ export const AddBar: React.FC = () => {
   }
   // we need a decode function
   return (
-    <Link to="/needItems" className="add-bar">
-      {data.join(' | ')}
+    <Link to="/requiredItems" className="add-bar link-unstyled">
+      Tools in cart: {data.join(' | ')}
     </Link>
   )
 }

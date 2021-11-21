@@ -1,24 +1,43 @@
 import _ from 'lodash'
 
-export const flatTolls = (allTools: any) => {
-  const list: string[] = []
-  Object.keys(allTools).forEach((key) => {
-    Object.keys(allTools[key]).forEach((subkey) => {
-      list.push([key, subkey].join('-'))
-    })
-    return null
-  })
-  return list.sort()
-}
-
-// TODO: 1 getTool (id, prop)
-
-export const selectTool = (id: string, data: any) => {
+export const getTool = ({
+  id,
+  store,
+  props,
+}: {
+  id: string
+  store: any
+  props: string[]
+}): any => {
   const idRaw = id.split('-')
-  return _.get(data, `[${idRaw[0]}][${idRaw[1]}]`)
+  const toolData = _.get(store, `[${idRaw[0]}][${idRaw[1]}]`)
+  if (props && props.length) {
+    return _.pick(toolData, props)
+  }
+  return toolData
 }
 
-export const selectByProp = ({
+export const getToolsPropsValue = ({
+  id,
+  store,
+  props,
+}: {
+  id: string[]
+  store: any
+  props: string
+}): any => {
+  const self: any = []
+  id.forEach((element: string) => {
+    const e = getTool({ id: element, store, props: [props] })
+    if (e[props]) {
+      self.push(e[props])
+    }
+  })
+
+  return self
+}
+
+export const getToolsByProp = ({
   store,
   propertie,
   evaluator,
@@ -38,6 +57,29 @@ export const selectByProp = ({
     }
   })
   return self
+}
+
+export const convertToLiter = (string: string) => {
+  const self = string.split('x')
+  return self.reduce((p: any, c: any) => p * +c, 1) / 1000
+}
+
+// legacy ---------------------------------------------
+
+export const flatTolls = (allTools: any) => {
+  const list: string[] = []
+  Object.keys(allTools).forEach((key) => {
+    Object.keys(allTools[key]).forEach((subkey) => {
+      list.push([key, subkey].join('-'))
+    })
+    return null
+  })
+  return list.sort()
+}
+
+export const selectTool = (id: string, data: any) => {
+  const idRaw = id.split('-')
+  return _.get(data, `[${idRaw[0]}][${idRaw[1]}]`)
 }
 
 // TODO: 2 getTool (id, prop) replace

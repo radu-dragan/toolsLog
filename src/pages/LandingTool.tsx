@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { AddBar } from '../components/landing_page_bar'
 import {
   flatSubTools,
-  // flatTolls,
   fullPrice,
-  selectToolTitle,
+  getTool,
   storedgeTools,
 } from '../components/toolWorker'
+import { LandingRow } from './LandingTool/row'
+import { Container } from './Skaffolding/container'
+import { SItem } from './Skaffolding/sidebarItem'
 import { DT } from './_scafolding'
-// import { selectToolData } from '../store/selector'
 
 export const LandingTool: React.FC = () => {
   const storeData = useSelector((state) => state)
@@ -23,26 +23,13 @@ export const LandingTool: React.FC = () => {
   }, [])
 
   return (
-    <>
-    <AddBar />
-      <div className="container">
-        <div className="row">
-          <h1>Tool Warehouse</h1>
-          <ul className="list-group list-group-flush col-8">
-            {allTools.map((key: string) => (
-              <li key={key} className="list-group-item">
-                <Link to={key} className="link-unstyled">
-                  {[key, selectToolTitle(key, storeData)]
-                    .filter((x) => x)
-                    .join(' | ')}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="col-4">
-            <div>
-              <b>Sub Tools</b>
-              <hr />
+    <Container
+      title="Tool Warehouse"
+      back={false}
+      sidebar={
+        <>
+          <SItem title="Sub Tools">
+            <>
               {subTools.map((key) => (
                 <Link
                   to={`/subTools/${encodeURIComponent(key)}`}
@@ -52,10 +39,11 @@ export const LandingTool: React.FC = () => {
                   {key}&nbsp;&nbsp;&nbsp;
                 </Link>
               ))}
-            </div>
-            <div className="mt-5">
-              <b>Storage</b>
-              <hr />
+            </>
+          </SItem>
+
+          <SItem title="Storage">
+            <>
               {storadge.map((key) => (
                 <Link
                   to={`/storage/${encodeURIComponent(key)}`}
@@ -65,18 +53,31 @@ export const LandingTool: React.FC = () => {
                   {key}&nbsp;&nbsp;&nbsp;
                 </Link>
               ))}
-            </div>
-            <div className="mt-5">
-              <hr />
-              <dl className="row">
-                <DT title="Tools" value={allTools.length.toString()} />
-                <DT title="Total Value" value={fullPrice(storeData)} />
-              </dl>
-              <hr />
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+            </>
+          </SItem>
+
+          <SItem title="Storage">
+            <dl className="row">
+              <DT title="Tools" value={allTools.length.toString()} />
+              <DT title="Total Value" value={fullPrice(storeData)} />
+            </dl>
+          </SItem>
+        </>
+      }
+    >
+      <ul className="list-group list-group-flush">
+        {allTools.map((key: string) => (
+          <LandingRow
+            {...getTool({
+              id: key,
+              store: storeData,
+              props: ['title'],
+            })}
+            key={key}
+            id={key}
+          />
+        ))}
+      </ul>
+    </Container>
   )
 }
