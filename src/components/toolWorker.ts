@@ -116,7 +116,6 @@ export const storedgeTools = (allTools: any) => {
   })
 
   list = _.sortedUniq(list.sort()).filter((x) => !!x)
-  console.log(list)
   return list
 }
 

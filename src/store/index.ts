@@ -8,6 +8,16 @@ const consumables = require('../toolData/consumables.json')
 const bike = require('../toolData/bikes.json')
 const storage = require('../toolData/storage.json')
 
+const getAllItems = (item:any) => {
+  const list: string[] = []
+  Object.keys(item).forEach((key) => {
+    Object.keys(item[key]).forEach((subkey) => {
+      list.push([key, subkey].join('-'))
+    })
+  })
+  return list.sort()
+}
+
 const initialState = {
   ...tool,
   ...consumables,
@@ -15,15 +25,8 @@ const initialState = {
   ...storage,
   logTools: {},
 }
-initialState.allTools = (() => {
-  const list: string[] = []
-  Object.keys(tool).forEach((key) => {
-    Object.keys(tool[key]).forEach((subkey) => {
-      list.push([key, subkey].join('-'))
-    })
-  })
-  return list.sort()
-})()
+initialState.allTools = getAllItems(tool)
+initialState.allConsumables = getAllItems(consumables)
 
 const rootReducer = (state = initialState, action: any) => {
   switch (action.type) {

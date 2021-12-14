@@ -14,7 +14,7 @@ import { DT } from './_scafolding'
 
 export const LandingTool: React.FC = () => {
   const storeData = useSelector((state) => state)
-  const { allTools } = useSelector((state) => state) as any
+  const { allTools, allConsumables } = useSelector((state) => state) as any
   const subTools = flatSubTools(storeData)
   const storadge = storedgeTools(storeData)
 
@@ -65,19 +65,38 @@ export const LandingTool: React.FC = () => {
         </>
       }
     >
-      <ul className="list-group list-group-flush">
-        {allTools.map((key: string) => (
-          <LandingRow
-            {...getTool({
-              id: key,
-              store: storeData,
-              props: ['title'],
-            })}
-            key={key}
-            id={key}
-          />
-        ))}
-      </ul>
+      <div className="large-list-items" id="tools">
+        <ul className="list-group list-group-flush">
+          {allTools.map((key: string) => (
+            <LandingRow
+              {...getTool({
+                id: key,
+                store: storeData,
+                props: ['title'],
+              })}
+              key={key}
+              id={key}
+            />
+          ))}
+        </ul>
+      </div>
+
+      <div className="large-list-items" id="consumables">
+        <h3> Consumables </h3>
+        <ul className="list-group list-group-flush">
+          {allConsumables.map((key: string) => (
+            <LandingRow
+              {...getTool({
+                id: key,
+                store: storeData,
+                props: ['title'],
+              })}
+              key={key}
+              id={key}
+            />
+          ))}
+        </ul>
+      </div>
     </Container>
   )
 }

@@ -79,6 +79,9 @@
       "storage": "X-001",
       "storagePosition": [2, 3]
     },
+    "02": {
+      "titile": "Bike repair tool kit"
+    },
     "04": {
       "title": "wrenches 6-19mm",
       "category": ["wrenches", "fixed wrenches,", "open wrenches"],

@@ -31,6 +31,8 @@ const FormatDecimal: React.FC<{ value: number; unit: string }> = ({
 export const requiredTool: React.FC<SuperProps> = () => {
   const storeData = useSelector((state) => state) as any
   const data = Object.keys(storeData.logTools)
+  const dataTools = data.filter((e) => e.startsWith('A'))
+  const dataConsumables = data.filter((e) => e.startsWith('C'))
 
   // bombine super props with the item in redux
   // use the decode
@@ -54,7 +56,7 @@ export const requiredTool: React.FC<SuperProps> = () => {
   return (
     <Container
       title="Required Items"
-      subTitle={`${data.length} Items`}
+      // subTitle={`${data.length} Items`}
       sidebar={
         <>
           <SItem
@@ -77,19 +79,51 @@ export const requiredTool: React.FC<SuperProps> = () => {
         </>
       }
     >
-      <ul className="list-group list-group-flush">
-        {data.map((key: string) => (
-          <RequiredRow
-            {...getTool({
-              id: key,
-              store: storeData,
-              props: ['title'],
-            })}
-            key={key}
-            id={key}
-          />
-        ))}
-      </ul>
+      {dataTools.length > 0 && (
+        <div className="large-list-items" id="tools">
+          <h3>
+            Tools <sup>{dataTools.length > 1 ? dataTools.length : ''}</sup>
+          </h3>
+          <ul className="list-group list-group-flush">
+            {dataTools.map((key: string) => (
+              <RequiredRow
+                {...getTool({
+                  id: key,
+                  store: storeData,
+                  props: ['title'],
+                })}
+                key={key}
+                id={key}
+              />
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {dataConsumables.length > 0 && (
+        <div className="large-list-items" id="consumables">
+          <h3>
+            Consumables{' '}
+            <sup>
+              {dataConsumables.length > 1 ? dataConsumables.length : ''}
+            </sup>
+          </h3>
+          <ul className="list-group list-group-flush">
+            {dataConsumables.map((key: string) => (
+              <RequiredRow
+                {...getTool({
+                  id: key,
+                  store: storeData,
+                  props: ['title'],
+                })}
+                key={key}
+                id={key}
+                units={1}
+              />
+            ))}
+          </ul>
+        </div>
+      )}
     </Container>
   )
 }

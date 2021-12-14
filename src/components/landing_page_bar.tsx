@@ -13,7 +13,7 @@ export const AddBar: React.FC = () => {
   // we need a decode function
   return (
     <Link to="/requiredItems" className="add-bar link-unstyled">
-      Tools in cart: {data.join(' | ')}
+      Tools in cart: {data.sort().join(' | ')}
     </Link>
   )
 }
