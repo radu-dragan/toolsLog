@@ -8,7 +8,7 @@ const consumables = require('../toolData/consumables.json')
 const bike = require('../toolData/bikes.json')
 const storage = require('../toolData/storage.json')
 
-const getAllItems = (item:any) => {
+const getAllItems = (item: any) => {
   const list: string[] = []
   Object.keys(item).forEach((key) => {
     Object.keys(item[key]).forEach((subkey) => {
@@ -40,10 +40,14 @@ const rootReducer = (state = initialState, action: any) => {
         ...state,
         logTools: _.omit(state.logTools, action.item),
       }
-    // case 'countUP':
-    //   return { ...state, value: state.value + 1 }
-    // case 'countDown':
-    //   return { ...state, value: state.value - 1 }
+    case 'ADD_ITEM_OPTION':
+      const { logTools } = state
+      logTools[action.item.id] = { ...logTools[action.item.id], ...action.item }
+      
+      return {
+        ...state,
+        logTools,
+      }
     default:
       return state
   }

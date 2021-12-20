@@ -32,6 +32,130 @@ export const ToolID: React.FC = () => {
     document.title = [toolDataRaw.title, toolId].join(' | ')
   }, [])
 
+  const AddBTN: React.FC = () => (
+    <div
+      className="AddBtn"
+      onKeyPress={() => {}}
+      role="button"
+      tabIndex={0}
+      onClick={() => {
+        if (add) {
+          dispatch({
+            type: 'ADD_ITEM',
+            item: { [toolId]: { id: toolId } },
+          })
+        } else {
+          dispatch({
+            type: 'REMOVE_ITEM',
+            item: toolId,
+          })
+        }
+      }}
+    >
+      {add ? '+' : '-'}
+    </div>
+  )
+
+  const Options: React.FC = () => (
+    <div
+      className="btn btn-outline-secondary"
+      onKeyPress={() => {}}
+      role="button"
+      tabIndex={0}
+      onClick={() => {
+        dispatch({
+          type: 'ADD_ITEM_OPTION',
+          item: { id: toolId, optional: true },
+        })
+      }}
+    >
+      Optional
+    </div>
+  )
+
+  const ObtionsGroup: React.FC = () => (
+    <div id="options-btn">
+      <div
+        className="btn-group mr-2 mt-3"
+        role="group"
+        aria-label="First group"
+      >
+        <Options />
+        <button type="button" className="btn btn-outline-secondary">
+          L
+        </button>
+        <button type="button" className="btn btn-outline-secondary">
+          I
+        </button>
+      </div>
+    </div>
+  )
+
+  const CountGroup: React.FC = () => {
+    const count = (() => {
+      if (add) {
+        return 0
+      }
+      if (storeData.logTools[toolId].count) {
+        return +storeData.logTools[toolId].count
+      }
+      return 1
+    })()
+
+    if (count === 0) {
+      return null
+    }
+
+    return (
+      <div id="options-btn">
+        <div
+          className="btn-group mr-2 mt-3"
+          role="group"
+          aria-label="First group"
+        >
+          <div
+            className="btn btn-outline-secondary"
+            onKeyPress={() => {}}
+            role="button"
+            tabIndex={0}
+            onClick={() => {
+              dispatch({
+                type: 'ADD_ITEM_OPTION',
+                item: { id: toolId, count: count + 1 },
+              })
+            }}
+          >
+            +
+          </div>
+          <button type="button" className="btn btn-outline-secondary">
+            {count}
+          </button>
+          <div
+            className="btn btn-outline-secondary"
+            onKeyPress={() => {}}
+            role="button"
+            tabIndex={0}
+            onClick={() => {
+              if (count <= 1) {
+                dispatch({
+                  type: 'REMOVE_ITEM',
+                  item: toolId,
+                })
+              } else {
+                dispatch({
+                  type: 'ADD_ITEM_OPTION',
+                  item: { id: toolId, count: count - 1 },
+                })
+              }
+            }}
+          >
+            -
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <Fragment>
       <AddBar />
@@ -41,28 +165,8 @@ export const ToolID: React.FC = () => {
         </Link>
         <div className="row">
           <div className="col">
-            <div
-              className="AddBtn"
-              onKeyPress={() => {}}
-              role="button"
-              tabIndex={0}
-              data-qa="increment-counter"
-              onClick={() => {
-                if (add) {
-                  dispatch({
-                    type: 'ADD_ITEM',
-                    item: { [toolId]: { id: toolId } },
-                  })
-                } else {
-                  dispatch({
-                    type: 'REMOVE_ITEM',
-                    item: toolId,
-                  })
-                }
-              }}
-            >
-              {add ? '+' : '-'}
-            </div>
+            <AddBTN />
+
             <h1 className={`offset-md-${offset}`}>{toolDataRaw.title}</h1>
             <h2 className={`offset-md-${offset}`}>{toolId}</h2>
           </div>
@@ -79,6 +183,9 @@ export const ToolID: React.FC = () => {
               </Fragment>
             ))}
           </dl>
+
+          <ObtionsGroup />
+          <CountGroup />
         </div>
       </div>
       <div className="container-fluid">

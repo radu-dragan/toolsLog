@@ -53,6 +53,11 @@ export const requiredTool: React.FC<SuperProps> = () => {
   const sizeMissingElements = data.length - size.length
   const sizeReduced = size.reduce((p: any, c: any) => p + convertToLiter(c), 0)
 
+  const url = (() => {
+
+    return "XA"
+  })()
+
   return (
     <Container
       title="Required Items"
@@ -124,6 +129,8 @@ export const requiredTool: React.FC<SuperProps> = () => {
           </ul>
         </div>
       )}
+        <div className="large-list-items" id="url">{url}</div>
+
     </Container>
   )
 }

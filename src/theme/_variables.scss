@@ -1,11 +1,12 @@
 // ------------------ Color patterns --------------
-$color1: #03254c;
-$color2: rgba(255, 255, 255, 1);
+$color1: rgb(238, 237, 237);
+$color2: rgb(114, 114, 114);
 
 $backgroundColor: $color1;
 $borderColor: transparentize($color2, 0.8);
 
 // ------------------ Typography ------------------
 $fontColor: $color2;
+$fontAccent: darken($color2, 10%);
 
 // ------------------ Spacing ------------------
