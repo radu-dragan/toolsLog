@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { getToolsByProp } from '../components/toolWorker'
 import { Container } from './Skaffolding/container'
 
-interface ToolPath {
+export interface ToolPath {
   toolId: string
 }
 

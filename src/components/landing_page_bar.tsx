@@ -26,30 +26,6 @@ export const AddBar: React.FC = () => {
         return options.join(' ')
       })
 
-    // const keysArray = []
-
-    // for (const i of Object.entries(storeData.logTools).sort()) {
-    //   let temp = ''
-    //   const item: any = i[1]
-    //   const q = Object.keys(_.omit(item, ['id']))
-
-    //   temp += item.id
-
-    //   // eslint-disable-next-line no-plusplus
-    //   for (let key = 0; key < q.length; key++) {
-    //     const option = q[key]
-    //     if (item[option]) {
-    //       if (option === 'count') {
-    //         temp = `${item[option]}x ${temp}`
-    //       } else {
-    //         temp += ` (${option})`
-    //       }
-    //     }
-    //   }
-
-    //   keysArray.push(temp)
-    // }
-
     return displayArray
   })()
 

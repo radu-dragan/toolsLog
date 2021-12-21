@@ -12,6 +12,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  border-width: 0;
+}
+
 h1 {
   font-family: 'Bebas Neue', cursive;
 }
@@ -200,4 +204,14 @@ code {
 
 .large-list-items + .large-list-items {
   margin-top: 50px;
+}
+
+.inline-input {
+  flex-wrap: nowrap;
+  place-items: center;
+
+  .input-group-text {
+    margin-right: 20px;
+    max-height: 30px;
+  }
 }

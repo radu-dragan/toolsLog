@@ -11,8 +11,8 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Switch>
+        <Route path="/requiredItems/:toolId/" component={requiredTool} />
         <Route path="/requiredItems/" component={requiredTool} />
-        <Route path="/required/:toolId/" component={requiredTool} />
 
         <Route path="/subTools/:toolId/" component={SubTool} />
         <Route path="/storage/:toolId/" component={StorePage} />

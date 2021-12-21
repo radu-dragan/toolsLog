@@ -1,5 +1,8 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import _ from 'lodash'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
 import {
   getToolsPropsValue,
   getTool,
@@ -8,6 +11,9 @@ import {
 import { RequiredRow } from './RequiredToolsPage/row'
 import { Container } from './Skaffolding/container'
 import { SItem } from './Skaffolding/sidebarItem'
+import { ToolPath } from './StorePage'
+import './RequiredToolsPage/style.scss'
+import { decodeUrl } from './RequiredToolsPage/requiredDecodeUrl'
 
 interface SuperProps {
   data?: any
@@ -34,6 +40,8 @@ export const requiredTool: React.FC<SuperProps> = () => {
   const dataTools = data.filter((e) => e.startsWith('A'))
   const dataConsumables = data.filter((e) => e.startsWith('C'))
 
+  const dispatch = useDispatch()
+
   // bombine super props with the item in redux
   // use the decode
 
@@ -53,84 +61,156 @@ export const requiredTool: React.FC<SuperProps> = () => {
   const sizeMissingElements = data.length - size.length
   const sizeReduced = size.reduce((p: any, c: any) => p + convertToLiter(c), 0)
 
-  const url = (() => {
+  const buildUrl = (() => {
+    const mainSeparator = ';'
+    const minSeparator = ','
+    const displayArray: any = Object.entries(storeData.logTools)
+      .sort()
+      .map((val) => {
+        const value: any = val[1]
+        const options = Object.keys(_.omit(value, ['id']))
+          .sort()
+          .map((i) => {
+            switch (i) {
+              case 'count':
+                return `${value.count}Buc`
+              default:
+                return value[i] ? i : ''
+            }
+          })
+        options.unshift(value.id)
+        return options.join(minSeparator)
+      })
 
-    return "XA"
+    return displayArray.join(mainSeparator)
   })()
+
+  const toolId = decodeURIComponent(useParams<ToolPath>().toolId).split(';')
+
+  useEffect(() => {
+    decodeUrl({
+      data,
+      toolId,
+      dispatch,
+    })
+  }, [])
+
 
   return (
     <Container
       title="Required Items"
       // subTitle={`${data.length} Items`}
       sidebar={
-        <>
-          <SItem
-            title="Weight"
-            titleExtra={<FormatDecimal value={weightReduced} unit="Kg" />}
-          >
-            {!!weightMissingElements && (
-              <> Is Missing weight of {weightMissingElements} Item</>
-            )}
-          </SItem>
+        data.length > 0 ? (
+          <>
+            <SItem
+              title="Weight"
+              titleExtra={<FormatDecimal value={weightReduced} unit="Kg" />}
+            >
+              {!!weightMissingElements && (
+                <> Is Missing weight of {weightMissingElements} Item</>
+              )}
+            </SItem>
 
-          <SItem
-            title="Size"
-            titleExtra={<FormatDecimal value={sizeReduced} unit="L" />}
-          >
-            {!!sizeMissingElements && (
-              <> Is Missing size of {sizeMissingElements} Item</>
-            )}
-          </SItem>
-        </>
+            <SItem
+              title="Size"
+              titleExtra={<FormatDecimal value={sizeReduced} unit="L" />}
+            >
+              {!!sizeMissingElements && (
+                <> Is Missing size of {sizeMissingElements} Item</>
+              )}
+            </SItem>
+          </>
+        ) : (
+          <></>
+        )
       }
     >
-      {dataTools.length > 0 && (
-        <div className="large-list-items" id="tools">
-          <h3>
-            Tools <sup>{dataTools.length > 1 ? dataTools.length : ''}</sup>
-          </h3>
-          <ul className="list-group list-group-flush">
-            {dataTools.map((key: string) => (
-              <RequiredRow
-                {...getTool({
-                  id: key,
-                  store: storeData,
-                  props: ['title'],
-                })}
-                key={key}
-                id={key}
-              />
-            ))}
-          </ul>
-        </div>
-      )}
+      <>
+        {data.length > 0 ? (
+          <>
+            {dataTools.length > 0 && (
+              <div className="large-list-items" id="tools">
+                <h3>
+                  Tools{' '}
+                  <sup>{dataTools.length > 1 ? dataTools.length : ''}</sup>
+                </h3>
+                <ul className="list-group list-group-flush">
+                  {dataTools.map((key: string) => (
+                    <RequiredRow
+                      {...getTool({
+                        id: key,
+                        store: storeData,
+                        props: ['title'],
+                      })}
+                      key={key}
+                      id={key}
+                      // add flags here
+                    />
+                  ))}
+                </ul>
+              </div>
+            )}
 
-      {dataConsumables.length > 0 && (
-        <div className="large-list-items" id="consumables">
-          <h3>
-            Consumables{' '}
-            <sup>
-              {dataConsumables.length > 1 ? dataConsumables.length : ''}
-            </sup>
-          </h3>
-          <ul className="list-group list-group-flush">
-            {dataConsumables.map((key: string) => (
-              <RequiredRow
-                {...getTool({
-                  id: key,
-                  store: storeData,
-                  props: ['title'],
-                })}
-                key={key}
-                id={key}
-                units={1}
-              />
-            ))}
-          </ul>
-        </div>
-      )}
-        <div className="large-list-items" id="url">{url}</div>
+            {dataConsumables.length > 0 && (
+              <div className="large-list-items" id="consumables">
+                <h3>
+                  Consumables{' '}
+                  <sup>
+                    {dataConsumables.length > 1 ? dataConsumables.length : ''}
+                  </sup>
+                </h3>
+                <ul className="list-group list-group-flush">
+                  {dataConsumables.map((key: string) => (
+                    <RequiredRow
+                      {...getTool({
+                        id: key,
+                        store: storeData,
+                        props: ['title'],
+                      })}
+                      key={key}
+                      id={key}
+                      units={1}
+                    />
+                  ))}
+                </ul>
+              </div>
+            )}
 
+            <div className="large-list-items" id="url-input-container">
+              <div className="input-group mb-3 inline-input">
+                <span
+                  className="input-group-text"
+                  id="basic-addon1"
+                  onKeyPress={() => {}}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => {
+                    const copyText: any = document.getElementById('urlCopy')
+                    copyText.select()
+                    copyText.setSelectionRange(0, 99999)
+                    navigator.clipboard.writeText(copyText.value)
+                  }}
+                >
+                  copy
+                </span>
+                <input
+                  id="urlCopy"
+                  onChange={() => {}}
+                  type="text"
+                  className="form-control"
+                  placeholder="Username"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                  value={`http://localhost:3000/requiredItems/${buildUrl}`}
+                />
+              </div>
+            </div>
+          </>
+        ) : (
+          <>NO items</>
+        )}
+      </>
     </Container>
   )
 }
