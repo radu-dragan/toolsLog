@@ -180,14 +180,34 @@ code {
 }
 
 /* Requierd Page */
-.remove-btn {
-  background-color: lightgray;
-  color:white;
-  padding-left: 8px;
-  padding-right: 8px;
+// .remove-btn {
+//   background-color: lightgray;
+//   color:white;
+//   padding-left: 8px;
+//   padding-right: 8px;
+//   position: absolute;
+//   right: 0;
+//   border-radius: 100%;
+// }
+
+.add-remove-btn-group {
   position: absolute;
-  right: 0;
-  border-radius: 100%;
+  right: 10px;
+  top: 10px;
+
+  .btn {
+    box-shadow: none;
+    max-height: 20px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 10px;
+    font-size: 20px;
+  }
+
+  opacity: 0.2;
+  .list-group-item:hover & {
+    opacity: 1;
+  }
 }
 
 /* sidebar */

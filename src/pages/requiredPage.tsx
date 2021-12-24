@@ -8,12 +8,13 @@ import {
   getTool,
   convertToLiter,
 } from '../components/toolWorker'
-import { RequiredRow } from './RequiredToolsPage/row'
+import { RequiredRowNew } from './RequiredToolsPage/row'
 import { Container } from './Skaffolding/container'
 import { SItem } from './Skaffolding/sidebarItem'
 import { ToolPath } from './StorePage'
 import './RequiredToolsPage/style.scss'
 import { decodeUrl } from './RequiredToolsPage/requiredDecodeUrl'
+import { isConsumable, isTool } from '../components/isHelper'
 
 interface SuperProps {
   data?: any
@@ -36,9 +37,9 @@ const FormatDecimal: React.FC<{ value: number; unit: string }> = ({
 
 export const requiredTool: React.FC<SuperProps> = () => {
   const storeData = useSelector((state) => state) as any
-  const data = Object.keys(storeData.logTools)
-  const dataTools = data.filter((e) => e.startsWith('A'))
-  const dataConsumables = data.filter((e) => e.startsWith('C'))
+  const data: any = Object.keys(storeData.logTools)
+  const dataTools = data.filter((e: string) => isTool(e))
+  const dataConsumables = data.filter((e: string) => isConsumable(e))
 
   const dispatch = useDispatch()
 
@@ -46,18 +47,20 @@ export const requiredTool: React.FC<SuperProps> = () => {
   // use the decode
 
   const weight = getToolsPropsValue({
-    id: Object.keys(storeData.logTools),
+    id: data,
     store: storeData,
     props: 'weight',
   })
+
   const weightMissingElements = data.length - weight.length
   const weightReduced = weight.reduce((p: any, c: any) => p + +c, 0) / 1000
 
   const size = getToolsPropsValue({
-    id: Object.keys(storeData.logTools),
+    id: data,
     store: storeData,
     props: 'size',
   })
+
   const sizeMissingElements = data.length - size.length
   const sizeReduced = size.reduce((p: any, c: any) => p + convertToLiter(c), 0)
 
@@ -95,11 +98,9 @@ export const requiredTool: React.FC<SuperProps> = () => {
     })
   }, [])
 
-
   return (
     <Container
       title="Required Items"
-      // subTitle={`${data.length} Items`}
       sidebar={
         data.length > 0 ? (
           <>
@@ -137,15 +138,15 @@ export const requiredTool: React.FC<SuperProps> = () => {
                 </h3>
                 <ul className="list-group list-group-flush">
                   {dataTools.map((key: string) => (
-                    <RequiredRow
+                    <RequiredRowNew
                       {...getTool({
                         id: key,
                         store: storeData,
                         props: ['title'],
                       })}
                       key={key}
+                      nonIteratable
                       id={key}
-                      // add flags here
                     />
                   ))}
                 </ul>
@@ -162,7 +163,7 @@ export const requiredTool: React.FC<SuperProps> = () => {
                 </h3>
                 <ul className="list-group list-group-flush">
                   {dataConsumables.map((key: string) => (
-                    <RequiredRow
+                    <RequiredRowNew
                       {...getTool({
                         id: key,
                         store: storeData,
@@ -170,7 +171,8 @@ export const requiredTool: React.FC<SuperProps> = () => {
                       })}
                       key={key}
                       id={key}
-                      units={1}
+                      units="BUC"
+                      nrItems={storeData.logTools[key].count || 1}
                     />
                   ))}
                 </ul>

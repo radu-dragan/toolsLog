@@ -43,7 +43,7 @@ const rootReducer = (state = initialState, action: any) => {
     case 'ADD_ITEM_OPTION':
       const { logTools } = state
       logTools[action.item.id] = { ...logTools[action.item.id], ...action.item }
-      
+
       return {
         ...state,
         logTools,
