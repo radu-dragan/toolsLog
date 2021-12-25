@@ -73,6 +73,16 @@ export const ToolID: React.FC = () => {
     </div>
   )
 
+  const countItems = (() => {
+    if (add) {
+      return 0
+    }
+    if (storeData.logTools[toolId].count) {
+      return +storeData.logTools[toolId].count
+    }
+    return 1
+  })()
+
   const ObtionsGroup: React.FC = () => (
     <div id="options-btn">
       <div
@@ -92,20 +102,6 @@ export const ToolID: React.FC = () => {
   )
 
   const CountGroup: React.FC = () => {
-    const count = (() => {
-      if (add) {
-        return 0
-      }
-      if (storeData.logTools[toolId].count) {
-        return +storeData.logTools[toolId].count
-      }
-      return 1
-    })()
-
-    if (count === 0) {
-      return null
-    }
-
     return (
       <div id="options-btn">
         <div
@@ -121,14 +117,14 @@ export const ToolID: React.FC = () => {
             onClick={() => {
               dispatch({
                 type: 'ADD_ITEM_OPTION',
-                item: { id: toolId, count: count + 1 },
+                item: { id: toolId, count: countItems + 1 },
               })
             }}
           >
             +
           </div>
           <button type="button" className="btn btn-outline-secondary">
-            {count}
+            {countItems}
           </button>
           <div
             className="btn btn-outline-secondary"
@@ -136,7 +132,7 @@ export const ToolID: React.FC = () => {
             role="button"
             tabIndex={0}
             onClick={() => {
-              if (count <= 1) {
+              if (countItems <= 1) {
                 dispatch({
                   type: 'REMOVE_ITEM',
                   item: toolId,
@@ -144,7 +140,7 @@ export const ToolID: React.FC = () => {
               } else {
                 dispatch({
                   type: 'ADD_ITEM_OPTION',
-                  item: { id: toolId, count: count - 1 },
+                  item: { id: toolId, count: countItems - 1 },
                 })
               }
             }}
@@ -184,8 +180,12 @@ export const ToolID: React.FC = () => {
             ))}
           </dl>
 
-          <ObtionsGroup />
-          <CountGroup />
+          {!!countItems && (
+            <>
+              <ObtionsGroup />
+              <CountGroup />
+            </>
+          )}
         </div>
       </div>
       <div className="container-fluid">

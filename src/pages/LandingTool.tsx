@@ -7,7 +7,7 @@ import {
   getTool,
   storedgeTools,
 } from '../components/toolWorker'
-import { LandingRow } from './LandingTool/row'
+// import { LandingRow } from './LandingTool/row'
 import { RequiredRowNew } from './RequiredToolsPage/row'
 import { Container } from './Skaffolding/container'
 import { SItem } from './Skaffolding/sidebarItem'
@@ -69,7 +69,7 @@ export const LandingTool: React.FC = () => {
       <div className="large-list-items" id="tools">
         <ul className="list-group list-group-flush">
           {allTools.map((key: string) => (
-            <LandingRow
+            <RequiredRowNew
               {...getTool({
                 id: key,
                 store: storeData,
@@ -77,6 +77,9 @@ export const LandingTool: React.FC = () => {
               })}
               key={key}
               id={key}
+              // units="BUC"
+              nrItems={storeData.logTools[key]?.count || 0}
+              nonIteratable
             />
           ))}
         </ul>
@@ -97,15 +100,6 @@ export const LandingTool: React.FC = () => {
               units="BUC"
               nrItems={storeData.logTools[key]?.count || 0}
             />
-            // <LandingRow
-            //   {...getTool({
-            //     id: key,
-            //     store: storeData,
-            //     props: ['title'],
-            //   })}
-            //   key={key}
-            //   id={key}
-            // />
           ))}
         </ul>
       </div>

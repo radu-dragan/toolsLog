@@ -20,7 +20,7 @@ export const Container: React.FC<{
   return (
     <>
       {back && (
-        <Link className="container-back" to="./">
+        <Link className="container-back" to="/">
           &lsaquo;
         </Link>
       )}

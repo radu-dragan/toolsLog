@@ -3,6 +3,8 @@ import _ from 'lodash'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { isConsumable } from './isHelper'
+// import './landing_page_bar.scss'
 
 export const AddBar: React.FC = () => {
   const storeData = useSelector((state) => state) as any
@@ -17,13 +19,16 @@ export const AddBar: React.FC = () => {
           .map((i) => {
             switch (i) {
               case 'count':
-                return `${value.count}Buc`
+                if (isConsumable(value.id)) {
+                  return `${value.count}Buc`
+                }
+                return ''
               default:
                 return value[i] ? i : ''
             }
           })
         options.unshift(value.id)
-        return options.join(' ')
+        return options.filter((x) => x).join(' ')
       })
 
     return displayArray

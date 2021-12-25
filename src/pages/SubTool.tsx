@@ -1,8 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { nothing } from '../components/devHelper'
-import { getToolsByProp } from '../components/toolWorker'
+import { getTool, getToolsByProp } from '../components/toolWorker'
+import { RequiredRowNew } from './RequiredToolsPage/row'
 import { Container } from './Skaffolding/container'
 // import { filterSubtools } from '../components/toolWorker'
 
@@ -15,7 +16,7 @@ interface ToolPath {
 }
 
 export const SubTool: React.FC<SuperProps> = () => {
-  const storeData = useSelector((state) => state)
+  const storeData: any = useSelector((state) => state)
   const subTool = decodeURIComponent(useParams<ToolPath>().toolId)
   const subToolList = getToolsByProp({
     store: storeData,
@@ -33,11 +34,23 @@ export const SubTool: React.FC<SuperProps> = () => {
     <Container title="SubTools">
       <ul className="list-group list-group-flush">
         {subToolList.map((item: any) => (
-          <li key={item.id} className="list-group-item">
-            <Link to={`../${item.id}`} className="link-unstyled">
-              {item.id}
-            </Link>
-          </li>
+          // <li key={item.id} className="list-group-item">
+          //   <Link to={`../${item.id}`} className="link-unstyled">
+          //     {item.id}
+          //   </Link>
+          // </li>
+          <RequiredRowNew
+            {...getTool({
+              id: item.id,
+              store: storeData,
+              props: ['title'],
+            })}
+            key={item.id}
+            id={item.id}
+            nonIteratable
+            // units="BUC"
+            nrItems={storeData.logTools[item.id]?.count || 0}
+          />
         ))}
       </ul>
     </Container>

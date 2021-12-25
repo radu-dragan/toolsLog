@@ -1,0 +1,16 @@
+@import './../theme/variables';
+
+.add-bar {
+  position: fixed;
+  background-color: $backgroundColor;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 1;
+}

@@ -76,15 +76,27 @@ export const requiredTool: React.FC<SuperProps> = () => {
           .map((i) => {
             switch (i) {
               case 'count':
-                return `${value.count}Buc`
+                if (isConsumable(value.id)) {
+                  return `${value.count}Buc`
+                }
+                return ''
               default:
                 return value[i] ? i : ''
             }
           })
         options.unshift(value.id)
-        return options.join(minSeparator)
+        return options.filter((x) => x).join(minSeparator)
       })
 
+    //
+    // eslint-disable-next-line no-restricted-globals
+    history.pushState(
+      {},
+      '',
+      `${
+        window.location.href.split('/requiredItems')[0]
+      }/requiredItems/${displayArray.join(mainSeparator)}`
+    )
     return displayArray.join(mainSeparator)
   })()
 
@@ -146,6 +158,7 @@ export const requiredTool: React.FC<SuperProps> = () => {
                       })}
                       key={key}
                       nonIteratable
+                      nrItems={1}
                       id={key}
                     />
                   ))}
@@ -201,8 +214,8 @@ export const requiredTool: React.FC<SuperProps> = () => {
                   onChange={() => {}}
                   type="text"
                   className="form-control"
-                  placeholder="Username"
-                  aria-label="Username"
+                  placeholder="Url"
+                  aria-label="Url"
                   aria-describedby="basic-addon1"
                   value={`http://localhost:3000/requiredItems/${buildUrl}`}
                 />
