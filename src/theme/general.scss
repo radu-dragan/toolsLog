@@ -155,7 +155,8 @@ code {
 }
 
 .add-bar {
-  position: absolute;
+  position: fixed;
+  background-color: $backgroundColor;
   top: 0;
   left: 0;
   right: 0;
@@ -165,6 +166,7 @@ code {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 1;
 }
 
 /* Scaffolding */
@@ -233,5 +235,20 @@ code {
   .input-group-text {
     margin-right: 20px;
     max-height: 30px;
+  }
+}
+
+/* IN file */
+.btn {
+  &.add-btn,
+  &.remove-btn {
+    &, &:active {
+      border-color: $fontColor;
+      color: $fontColor;
+      background-color: white;
+    }
+    &:hover {
+      opacity: 0.8
+    }
   }
 }

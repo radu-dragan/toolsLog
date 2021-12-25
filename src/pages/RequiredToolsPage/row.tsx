@@ -39,7 +39,8 @@ const Units: React.FC<{ units?: string; nrItems?: number }> = ({
   nrItems = 1,
   units,
 }) => {
-  if (!units) {
+  console.log(nrItems)
+  if (!units || +nrItems < 1) {
     return null
   }
   return (
@@ -130,9 +131,9 @@ export const RequiredRowNew: React.FC<{
   nrItems?: number
   units: string
   nonIteratable?: any
-}> = ({ title, id, nrItems, units, nonIteratable }) => {
+}> = ({ title, id, nrItems = 0, units, nonIteratable }) => {
   return (
-    <li className="list-group-item">
+    <li className={['list-group-item', +nrItems < 1 ? 'A' : 'B'].join(' ')}>
       <Link to={id} className="link-unstyled">
         <>
           <Units nrItems={nrItems} units={units} />

@@ -8,12 +8,13 @@ import {
   storedgeTools,
 } from '../components/toolWorker'
 import { LandingRow } from './LandingTool/row'
+import { RequiredRowNew } from './RequiredToolsPage/row'
 import { Container } from './Skaffolding/container'
 import { SItem } from './Skaffolding/sidebarItem'
 import { DT } from './_scafolding'
 
 export const LandingTool: React.FC = () => {
-  const storeData = useSelector((state) => state)
+  const storeData: any = useSelector((state) => state)
   const { allTools, allConsumables } = useSelector((state) => state) as any
   const subTools = flatSubTools(storeData)
   const storadge = storedgeTools(storeData)
@@ -85,7 +86,7 @@ export const LandingTool: React.FC = () => {
         <h3> Consumables </h3>
         <ul className="list-group list-group-flush">
           {allConsumables.map((key: string) => (
-            <LandingRow
+            <RequiredRowNew
               {...getTool({
                 id: key,
                 store: storeData,
@@ -93,7 +94,18 @@ export const LandingTool: React.FC = () => {
               })}
               key={key}
               id={key}
+              units="BUC"
+              nrItems={storeData.logTools[key]?.count || 0}
             />
+            // <LandingRow
+            //   {...getTool({
+            //     id: key,
+            //     store: storeData,
+            //     props: ['title'],
+            //   })}
+            //   key={key}
+            //   id={key}
+            // />
           ))}
         </ul>
       </div>
