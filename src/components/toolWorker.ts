@@ -155,3 +155,30 @@ export const filterSubtools = ({
 
   return list
 }
+
+export const getAllOptions = ({
+  store,
+  option,
+}: {
+  store: any
+  option: any
+}): any => {
+  const list: string[] = []
+
+  Object.keys(store).forEach((key) => {
+    Object.keys(store[key]).forEach((subkey) => {
+      if (store[key][subkey][option]) {
+        if (_.isArray(store[key][subkey][option])) {
+          list.push(...store[key][subkey][option])
+        } else {
+          list.push(store[key][subkey][option])
+        }
+      }
+    })
+    return null
+  })
+
+  // TODO: add a unique filter
+
+  return list.sort()
+}

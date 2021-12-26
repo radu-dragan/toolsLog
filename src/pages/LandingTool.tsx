@@ -15,7 +15,9 @@ import { DT } from './_scafolding'
 
 export const LandingTool: React.FC = () => {
   const storeData: any = useSelector((state) => state)
-  const { allTools, allConsumables } = useSelector((state) => state) as any
+  const { allTools, allConsumables, allBike, allStorage } = useSelector(
+    (state) => state
+  ) as any
   const subTools = flatSubTools(storeData)
   const storadge = storedgeTools(storeData)
 
@@ -57,8 +59,13 @@ export const LandingTool: React.FC = () => {
             </>
           </SItem>
 
-          <SItem title="Storage">
+          <SItem title="Total">
             <dl className="row">
+              <dd className="col-sm-12">
+                <Link className="link-unstyled" to="/table/">
+                  Map
+                </Link>
+              </dd>
               <DT title="Tools" value={allTools.length.toString()} />
               <DT title="Total Value" value={fullPrice(storeData)} />
             </dl>
@@ -101,6 +108,46 @@ export const LandingTool: React.FC = () => {
               nrItems={storeData.logTools[key]?.count || 0}
             />
           ))}
+        </ul>
+      </div>
+
+      <div className="large-list-items" id="consumables">
+        <h3>Bikes </h3>
+        <ul className="list-group list-group-flush">
+          {allBike.map((key: string) => (
+            <RequiredRowNew
+              {...getTool({
+                id: key,
+                store: storeData,
+                props: ['title'],
+              })}
+              key={key}
+              id={key}
+              nrItems={storeData.logTools[key]?.count || 0}
+              nonIteratable
+            />
+          ))}
+        </ul>
+      </div>
+
+      <div className="large-list-items" id="consumables">
+        <h3>Storage </h3>
+        <ul className="list-group list-group-flush">
+          {allStorage
+            .filter((x: string) => x.startsWith('Z'))
+            .map((key: string) => (
+              <RequiredRowNew
+                {...getTool({
+                  id: key,
+                  store: storeData,
+                  props: ['title'],
+                })}
+                key={key}
+                id={key}
+                nrItems={storeData.logTools[key]?.count || 0}
+                nonIteratable
+              />
+            ))}
         </ul>
       </div>
     </Container>

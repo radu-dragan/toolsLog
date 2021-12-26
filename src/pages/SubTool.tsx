@@ -34,11 +34,6 @@ export const SubTool: React.FC<SuperProps> = () => {
     <Container title="SubTools">
       <ul className="list-group list-group-flush">
         {subToolList.map((item: any) => (
-          // <li key={item.id} className="list-group-item">
-          //   <Link to={`../${item.id}`} className="link-unstyled">
-          //     {item.id}
-          //   </Link>
-          // </li>
           <RequiredRowNew
             {...getTool({
               id: item.id,

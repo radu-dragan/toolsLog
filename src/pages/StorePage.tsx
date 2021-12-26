@@ -10,7 +10,7 @@ export interface ToolPath {
 }
 
 export const StorePage: React.FC = () => {
-  const storeData:any = useSelector((state) => state)
+  const storeData: any = useSelector((state) => state)
   const toolId = decodeURIComponent(useParams<ToolPath>().toolId)
   const pageList = getToolsByProp({
     store: storeData,

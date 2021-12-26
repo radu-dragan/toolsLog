@@ -48,7 +48,10 @@ export const ItemFactory: React.FC<{
       return (
         <Line title={props.title} show={!!props.cardData}>
           <p>
-            <Link to={`../${props.title}/${props.cardData}`}>
+            <Link
+              to={`../${props.title}/${props.cardData}`}
+              className="link-unstyled"
+            >
               {props.cardData}
             </Link>
           </p>

@@ -27,6 +27,8 @@ const initialState = {
 }
 initialState.allTools = getAllItems(tool)
 initialState.allConsumables = getAllItems(consumables)
+initialState.allBike = getAllItems(bike)
+initialState.allStorage = getAllItems(storage)
 
 const rootReducer = (state = initialState, action: any) => {
   switch (action.type) {

@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams } from 'react-router-dom'
+import { isConsumable } from '../components/isHelper'
 import { AddBar } from '../components/landing_page_bar'
 import { Peagboard } from '../components/peagboard'
 import { Pinterest } from '../components/pinterest'
@@ -102,54 +103,57 @@ export const ToolID: React.FC = () => {
   )
 
   const CountGroup: React.FC = () => {
-    return (
-      <div id="options-btn">
-        <div
-          className="btn-group mr-2 mt-3"
-          role="group"
-          aria-label="First group"
-        >
+    if (isConsumable(toolId)) {
+      return (
+        <div id="options-btn">
           <div
-            className="btn btn-outline-secondary"
-            onKeyPress={() => {}}
-            role="button"
-            tabIndex={0}
-            onClick={() => {
-              dispatch({
-                type: 'ADD_ITEM_OPTION',
-                item: { id: toolId, count: countItems + 1 },
-              })
-            }}
+            className="btn-group mr-2 mt-3"
+            role="group"
+            aria-label="First group"
           >
-            +
-          </div>
-          <button type="button" className="btn btn-outline-secondary">
-            {countItems}
-          </button>
-          <div
-            className="btn btn-outline-secondary"
-            onKeyPress={() => {}}
-            role="button"
-            tabIndex={0}
-            onClick={() => {
-              if (countItems <= 1) {
-                dispatch({
-                  type: 'REMOVE_ITEM',
-                  item: toolId,
-                })
-              } else {
+            <div
+              className="btn btn-outline-secondary"
+              onKeyPress={() => {}}
+              role="button"
+              tabIndex={0}
+              onClick={() => {
                 dispatch({
                   type: 'ADD_ITEM_OPTION',
-                  item: { id: toolId, count: countItems - 1 },
+                  item: { id: toolId, count: countItems + 1 },
                 })
-              }
-            }}
-          >
-            -
+              }}
+            >
+              +
+            </div>
+            <button type="button" className="btn btn-outline-secondary">
+              {countItems}
+            </button>
+            <div
+              className="btn btn-outline-secondary"
+              onKeyPress={() => {}}
+              role="button"
+              tabIndex={0}
+              onClick={() => {
+                if (countItems <= 1) {
+                  dispatch({
+                    type: 'REMOVE_ITEM',
+                    item: toolId,
+                  })
+                } else {
+                  dispatch({
+                    type: 'ADD_ITEM_OPTION',
+                    item: { id: toolId, count: countItems - 1 },
+                  })
+                }
+              }}
+            >
+              -
+            </div>
           </div>
         </div>
-      </div>
-    )
+      )
+    }
+    return null
   }
 
   return (
