@@ -36,6 +36,7 @@ export const ItemFactory: React.FC<{
     case 'monthlyUse':
     case 'size':
     case 'weight':
+    case 'type':
       return (
         <Line title={props.title} show={!!props.cardData}>
           <p>{props.cardData}</p>

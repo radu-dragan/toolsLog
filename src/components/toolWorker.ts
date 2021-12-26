@@ -180,5 +180,10 @@ export const getAllOptions = ({
 
   // TODO: add a unique filter
 
-  return list.sort()
+  return list
+    .sort()
+    .filter((value, index, self) => {
+      return self.indexOf(value) === index
+    })
+    .filter((n) => n)
 }

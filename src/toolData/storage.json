@@ -37,10 +37,33 @@
 
   "Z": {
     "001": {
-      "title": "Decathlon 30 L"
+      "title": "Quechua Decathlon 30 L",
+      "type": "ghiozdan",
+      "volumMax": 30,
+      "maxWeight": 15,
+      "compatibleWith": ["BK-01"]
+    },
+    "002": {
+      "title": "Tribord Decathlon 20 L",
+      "type": "ghiozdan",
+      "volumMax": 20,
+      "maxWeight": 13,
+      "compatibleWith": ["BK-01"]
     },
     "010": {
-      "title": "Hard Case"
+      "title": "Qbrick One Hard Case base"
+    },
+    "011": {
+      "title": "Qbrick One Hard Case base 2"
+    },
+    "012": {
+      "title": "Qbrick One Hard Case base top"
+    },
+    "100": {
+      "title": "Collapsible Crate"
+    },
+    "200": {
+      "title": "Liza Ikea"
     }
   }
 }
