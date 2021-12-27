@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { cmToL } from './units_convertor'
 
 const formatTitle = (string: string) => {
   let self: string = string
@@ -34,8 +35,6 @@ export const ItemFactory: React.FC<{
     case 'fullName':
     case 'note':
     case 'monthlyUse':
-    case 'size':
-    case 'weight':
     case 'type':
       return (
         <Line title={props.title} show={!!props.cardData}>
@@ -73,7 +72,6 @@ export const ItemFactory: React.FC<{
               </Link>
             ))}
           </p>
-          {/* <p>{_.get(props, 'cardData', []).join(' | ')}</p> */}
         </Line>
       )
     case 'state':
@@ -108,11 +106,29 @@ export const ItemFactory: React.FC<{
         </Line>
       )
     case 'pinterest':
+    case 'media':
       return null
+
+    case 'weight':
+      return (
+        <Line title={props.title} show={!!props.cardData}>
+          <p>{props.cardData} g</p>
+        </Line>
+      )
+
+    case 'size':
+      return (
+        <Line title={props.title} show={!!props.cardData}>
+          <p>
+            {cmToL(props.cardData.split('x'))} L | {props.cardData} cm
+          </p>
+        </Line>
+      )
+
     default:
       return (
         <Line title={props.title}>
-          <p>x</p>
+          <p>{JSON.stringify(props.cardData)}</p>
         </Line>
       )
   }

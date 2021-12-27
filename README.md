@@ -1,6 +1,8 @@
-# ToolWarehouse 
+# ToolWarehouse
+ 
 
 Dev Logic [link](devLogic.md)
+Change Log [link](changeLog.md)
 
 # ID Structure
 

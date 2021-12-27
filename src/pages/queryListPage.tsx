@@ -25,7 +25,6 @@ export const QueryPage: React.FC = () => {
     },
   })
   const allOptions = getAllOptions({ store: storeData, option: category })
-  console.log(allOptions)
 
   return (
     <Container title={category} subTitle={value}>
