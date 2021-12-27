@@ -97,7 +97,7 @@ export const ItemFactory: React.FC<{
           <p>{data}</p>
         </Line>
       )
-    case 'exteralLink':
+    case 'externalLink':
       return (
         <Line title={props.title} show={!!props.cardData}>
           <p>

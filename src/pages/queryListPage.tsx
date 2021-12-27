@@ -49,11 +49,15 @@ export const QueryPage: React.FC = () => {
         <div className="large-list-items">
           <hr />
 
-          {allOptions.map((item: string, key: number) => (
-            <Link className="link-unstyled" to={`/${category}/${encodeURIComponent(item)}/`}>
-              {key > 0 ? ' | ' : ''} {item}
-            </Link>
-          ))}
+          {allOptions.map((item: string, key: number) => {
+            const url = `/${category}/${encodeURIComponent(item)}/`
+            const text = `${key > 0 ? ' | ' : ''} ${item}`
+            return (
+              <Link className="link-unstyled" to={url}>
+                {text}
+              </Link>
+            )
+          })}
         </div>
       </>
     </Container>

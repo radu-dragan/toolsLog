@@ -8,6 +8,7 @@ import { Pinterest } from '../components/pinterest'
 import { ItemFactory } from '../components/ToolItemFactoryFunction'
 import { selectTool } from '../components/toolWorker'
 
+// document.getElementsByClassName("no-data").length;
 // const toolData = require('../toolData/tools.json')
 
 interface ToolPath {
@@ -197,8 +198,9 @@ export const ToolID: React.FC = () => {
           <div className="col">
             <hr className="mt-5 mb-5" />
             <Peagboard
-              structure={toolDataRaw.dimensions}
-              elementSize={toolDataRaw.dimensions}
+              storage={toolDataRaw.storage}
+              size={toolDataRaw.size}
+              position={toolDataRaw.position}
             />
           </div>
         </div>

@@ -2,16 +2,17 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { selectTool } from './toolWorker'
 
-export const Peagboard: React.FC<{ structure: any; elementSize: any }> = ({
-  structure,
-  elementSize,
-}) => {
-  if (!structure && !elementSize) {
+export const Peagboard: React.FC<{
+  storage: any
+  size: any
+  position: any
+}> = ({ storage, size, position }) => {
+  if (!storage || !size || !position) {
     return null
   }
 
   const storeData = useSelector((state) => state)
-  const soridgeData = selectTool(structure.storage, storeData)
+  const soridgeData = selectTool(storage, storeData)
 
   const elementWidth =
     soridgeData.details.holeSize + soridgeData.details.holeDistance
@@ -57,15 +58,13 @@ export const Peagboard: React.FC<{ structure: any; elementSize: any }> = ({
 
         <rect
           x={
-            (elementSize.position[0] + 1) * elementWidth -
-            soridgeData.details.holeSize / 2
+            (position[0] + 1) * elementWidth - soridgeData.details.holeSize / 2
           }
           y={
-            (elementSize.position[1] + 1) * elementWidth -
-            soridgeData.details.holeSize / 2
+            (position[1] + 1) * elementWidth - soridgeData.details.holeSize / 2
           }
-          width={elementSize.size.split(' x ')[0]}
-          height={elementSize.size.split(' x ')[1]}
+          width={size.split(' x ')[0]}
+          height={size.split(' x ')[1]}
         />
       </svg>
     </div>

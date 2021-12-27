@@ -57,30 +57,79 @@
       ],
       "bothFrom": {
         "store": "Lidle Romania Bucuresti",
-        "price": "15"
+        "price": 15
       },
       "state": {
-        "value": "10",
+        "value": 10,
         "needReplace": "-",
         "mods": "-",
         "consumabile": "-"
       },
-      "exteralLink": "http://offers.kd2.org/en/ie/lidl/pfJWt/",
+      "externalLink": "http://offers.kd2.org/en/ie/lidl/pfJWt/",
       "pinterest": "821907000723176906",
       "note": "This is the most Important tool i have",
       "purchaseDate": "2010",
       "size": "24 x 18.5 x 5",
-      "weight": "1768",
+      "weight": 1768,
+      "usesConsumable": false,
+      "power": false,
       "score": {
-        "frequencyOfUse": "100",
-        "importance": "100",
-        "indispensability": "100"
+        "frequencyOfUse": 75,
+        "importance": 75,
+        "indispensability": 100
       },
       "storage": "X-001",
       "storagePosition": [2, 3]
     },
     "02": {
-      "titile": "Bike repair tool kit"
+      "title": "Bike repair tool kit",
+      "fullName": "CRIVIT® Bicycle tool set 20 pieces",
+      "storage": "X-004",
+      "bothFrom": { "store": "Lidle Romania Bucuresti", "price": "20" },
+      "state": {
+        "value": "10",
+        "needReplace": [
+          { "2021|12|01": "Tire spoon broke" },
+          { "2012|06|04": "Sponge lining tore" }
+        ],
+        "mods": [
+          { "2021|12|01": "Added leather lining instead of songe" },
+          { "2021|12|01": "Replaced badge and added custom 3d printed badge" }
+        ],
+        "consumabile": "-"
+      },
+      "purchaseDate": "2012",
+      "score": {
+        "frequencyOfUse": "33",
+        "importance": "50",
+        "indispensability": "50"
+      },
+      "note": "If you need to repair your bike this tool si the base to for everything",
+      "externalLink": "https://www.bol.com/nl/nl/p/crivit-fietsgereedschapsset-20-delig-fiets-gereedschapskoffer-fietsreparatie/9300000033065740/?Referrer=ADVNLGOO002066-G-110131524183-S-996519696630-9300000033065740&gclid=Cj0KCQiA5aWOBhDMARIsAIXLlkeO6qRioR3LYnSBhR_s0GZfTT43e20oEkDGPHiQ7YIx4HNmjaWLhlkaAvtfEALw_wcB",
+      "size": "28.5 x 21.3 x 6",
+      "weight": 1850,
+      "subTools": [
+        "wreath remover",
+        "tool for crank bearings, suitable for Hollowtech II and compatible crank bearings",
+        "Pedal wrench 15mm",
+        "Allen key 2mm",
+        "Allen key 2.5mm",
+        "Allen key 3mm",
+        "Allen key 4mm",
+        "Allen key 5mm",
+        "Allen key 6mm",
+        "Allen key 8mm",
+        "1x mounting bracket or trigger",
+        "tire lever",
+        "chain tool (6-10 courses)",
+        "spoke wrench (9/10/11/12/13/14/2x 15)",
+        "crank puller square",
+        "star cap tool for Hollowtech-II crankshafts",
+        "cassette extractor for Shimano HG",
+        "Torx wrench T25"
+      ],
+      "usesConsumable": false,
+      "power": false
     },
     "04": {
       "title": "wrenches 6-19mm",
@@ -88,7 +137,7 @@
       "description": "Open ended wranches",
       "fullName": "Go/on 7x open end wrench",
       "subTools": [
-        "Open wrench 6-7mm", 
+        "Open wrench 6-7mm",
         "Open wrench 8-9mm",
         "Open wrench 10-11mm",
         "Open wrench 12-13mm",
@@ -112,13 +161,12 @@
       "size": "14 x 18.5 x 4",
       "weight": "593",
       "score": {
-        "frequencyOfUse": "70",
-        "importance": "80",
-        "indispensability": "80"
+        "frequencyOfUse": "33",
+        "importance": "50",
+        "indispensability": "50"
       },
       "storage": "X-001",
       "storagePosition": [7, 25]
-
     },
     "55": {
       "title": "Needle-nose pliers",
@@ -135,7 +183,7 @@
       "note": "most commonly used pliars",
       "purchaseDate": "2020",
       "size": "18 x 5 x 2",
-      "weight": "180",
+      "weight": 180,
       "score": {
         "frequencyOfUse": "100",
         "importance": "100",
@@ -165,7 +213,7 @@
       "state": {
         "value": "50"
       },
-      "exteralLink": "https://www.knipex.com/products/pipe-wrenches-and-water-pump-pliers/siphon-and-connector-pliers-for-traps-tube-fittings-and-connectors/siphon-and-connector-pliersfor-traps-tube-fittings-and-connectors/8113250",
+      "externalLink": "https://www.knipex.com/products/pipe-wrenches-and-water-pump-pliers/siphon-and-connector-pliers-for-traps-tube-fittings-and-connectors/siphon-and-connector-pliersfor-traps-tube-fittings-and-connectors/8113250",
       "purchaseDate": "2021",
       "size": "25 x 6 x 1.5",
       "weight": "347",
@@ -183,7 +231,7 @@
       "state": {
         "value": "20"
       },
-      "exteralLink": "https://www.knipex.com/products/pipe-wrenches-and-water-pump-pliers/knipex-cobra-high-tech-water-pump-pliers/knipex-cobrahigh-tech-water-pump-pliers/8701250",
+      "externalLink": "https://www.knipex.com/products/pipe-wrenches-and-water-pump-pliers/knipex-cobra-high-tech-water-pump-pliers/knipex-cobrahigh-tech-water-pump-pliers/8701250",
       "purchaseDate": "2021",
       "size": "25 x 6 x 1.5",
       "weight": "332",
@@ -304,7 +352,7 @@
         "damage": ["heat shield nozzle"],
         "repairs": ["heat shild nozzle", "1/2021"]
       },
-      "exteralLink": "",
+      "externalLink": "",
       "note": "I think i would like it to be cordLess, but not sure",
       "purchaseDate": "2012",
       "usesConsumable": ["CX0001"],
@@ -333,7 +381,7 @@
         "mods": "",
         "consumabile": ""
       },
-      "exteralLink": "",
+      "externalLink": "",
       "note": "",
       "purchaseDate": "",
       "usesConsumable": ["CX0001"],
@@ -365,11 +413,8 @@
         "store": "",
         "price": "10"
       },
-      "dimensions": {
-        "storage": "X-002",
-        "size": "90 x 170 x 40",
-        "position": [3, 7]
-      }
+      "size": "90 x 170 x 40",
+      "position": [3, 7]
     },
     "84": {
       "title": "Scissors",
@@ -416,11 +461,9 @@
       },
       "weight": "144",
       "pinterest": "167759154846550385",
-      "dimensions": {
-        "storage": "X-002",
-        "size": "210 x 60 x 40",
-        "position": [0, 0]
-      }
+      "storage": "X-002",
+      "size": "210 x 60 x 40",
+      "position": [0, 0]
     },
     "89": {
       "title": "Bottle opener nail puller",
@@ -455,7 +498,7 @@
         "mods": "",
         "consumabile": ""
       },
-      "exteralLink": "",
+      "externalLink": "",
       "note": "",
       "purchaseDate": ""
     }

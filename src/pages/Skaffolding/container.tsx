@@ -9,6 +9,7 @@ export const Container: React.FC<{
   children?: any
   sidebar?: any
   back?: boolean
+  fluid?: boolean
 }> = ({
   addBar = true,
   title = 'Lorem Ipsum',
@@ -16,6 +17,7 @@ export const Container: React.FC<{
   sidebar,
   subTitle,
   back = true,
+  fluid = false,
 }) => {
   return (
     <>
@@ -25,7 +27,7 @@ export const Container: React.FC<{
         </Link>
       )}
       {addBar && <AddBar />}
-      <div className="container">
+      <div className={fluid ? 'container-fluid' : 'container'}>
         <div className="row">
           <h1>{title}</h1>
           {subTitle && <h2>{subTitle}</h2>}

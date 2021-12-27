@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { LandingTool } from './pages/LandingTool'
 import { QueryPage } from './pages/queryListPage'
 import { requiredTool } from './pages/requiredPage'
-import { tablePage } from './pages/tabelPage'
+import { tablePage } from './pages/tablelPage/tabelPage'
 import { ToolID } from './pages/ToolItemPage'
 
 const App: React.FC = () => {
