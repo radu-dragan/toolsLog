@@ -40,6 +40,7 @@ export const requiredTool: React.FC<SuperProps> = () => {
   const data: any = Object.keys(storeData.logTools)
   const dataTools = data.filter((e: string) => isTool(e))
   const dataConsumables = data.filter((e: string) => isConsumable(e))
+  const dataOther: any = _.difference(data, [...dataConsumables, ...dataTools])
 
   const dispatch = useDispatch()
 
@@ -145,7 +146,7 @@ export const requiredTool: React.FC<SuperProps> = () => {
             {dataTools.length > 0 && (
               <div className="large-list-items" id="tools">
                 <h3>
-                  Tools{' '}
+                  Tools
                   <sup>{dataTools.length > 1 ? dataTools.length : ''}</sup>
                 </h3>
                 <ul className="list-group list-group-flush">
@@ -169,7 +170,7 @@ export const requiredTool: React.FC<SuperProps> = () => {
             {dataConsumables.length > 0 && (
               <div className="large-list-items" id="consumables">
                 <h3>
-                  Consumables{' '}
+                  Consumables
                   <sup>
                     {dataConsumables.length > 1 ? dataConsumables.length : ''}
                   </sup>
@@ -186,6 +187,30 @@ export const requiredTool: React.FC<SuperProps> = () => {
                       id={key}
                       units="BUC"
                       nrItems={storeData.logTools[key].count || 1}
+                    />
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {dataOther.length > 0 && (
+              <div className="large-list-items" id="tools">
+                <h3>
+                  Other
+                  <sup>{dataOther.length > 1 ? dataOther.length : ''}</sup>
+                </h3>
+                <ul className="list-group list-group-flush">
+                  {dataOther.map((key: string) => (
+                    <RequiredRowNew
+                      {...getTool({
+                        id: key,
+                        store: storeData,
+                        props: ['title'],
+                      })}
+                      key={key}
+                      nonIteratable
+                      nrItems={1}
+                      id={key}
                     />
                   ))}
                 </ul>

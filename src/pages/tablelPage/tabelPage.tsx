@@ -32,7 +32,7 @@ export const tablePage: React.FC = () => {
             key={keyIndex}
             fluid
           >
-            <table className="table">
+            <table className="table table-striped">
               <thead>
                 <tr>
                   <th>ID</th>

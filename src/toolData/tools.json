@@ -2,7 +2,7 @@
   "A": {
     "01": {
       "title": "SOCKET & RATCHET DRIVE SET",
-      "category": ["SOCKET", "RATCHET", "Bits", "screwdriver"],
+      "category": ["socket", "ratchet", "bits", "screwdriver"],
       "description": "Main socket set i have i use it for everything",
       "fullName": "Powerfix Profi SOCKET & RATCHET DRIVE SET ",
       "subTools": [
@@ -62,8 +62,7 @@
       "state": {
         "value": 10,
         "needReplace": "-",
-        "mods": "-",
-        "consumabile": "-"
+        "mods": "-"
       },
       "externalLink": "http://offers.kd2.org/en/ie/lidl/pfJWt/",
       "pinterest": "821907000723176906",
@@ -81,6 +80,7 @@
       "storage": "X-001",
       "storagePosition": [2, 3]
     },
+
     "02": {
       "title": "Bike repair tool kit",
       "fullName": "CRIVIT® Bicycle tool set 20 pieces",
@@ -95,8 +95,7 @@
         "mods": [
           { "2021|12|01": "Added leather lining instead of songe" },
           { "2021|12|01": "Replaced badge and added custom 3d printed badge" }
-        ],
-        "consumabile": "-"
+        ]
       },
       "purchaseDate": "2012",
       "score": {
@@ -131,6 +130,7 @@
       "usesConsumable": false,
       "power": false
     },
+
     "04": {
       "title": "wrenches 6-19mm",
       "category": ["wrenches", "fixed wrenches,", "open wrenches"],
@@ -152,22 +152,50 @@
       "state": {
         "value": "1",
         "needReplace": "-",
-        "mods": "-",
-        "consumabile": "-"
+        "mods": "-"
       },
       "pinterest": "684195368398730602",
       "note": "One of the first tools ever both",
-      "purchaseDate": "2013",
+      "purchaseDate": 2013,
       "size": "14 x 18.5 x 4",
-      "weight": "593",
+      "weight": 593,
       "score": {
-        "frequencyOfUse": "33",
-        "importance": "50",
-        "indispensability": "50"
+        "frequencyOfUse": 33,
+        "importance": 43,
+        "indispensability": 75
       },
       "storage": "X-001",
       "storagePosition": [7, 25]
     },
+
+    "05": {
+      "title": "3D printer",
+      "description": "",
+      "fullName": "Creality Ender 2 v2",
+      "subTools": ["Needle nose pliers", "Cutting pliers", "flat screwdriver", "scraper 38mm", "12mm wranch", "14mm wranch"],
+      "bothFrom": {
+        "store": "123-3d.nl",
+        "price": 200
+      },
+      "state": {
+        "value": "130",
+        "needReplace": "",
+        "mods": ["spool holder", "light support"]
+      },
+      "note": "3d printer i both my wife for Christmas",
+      "storage": "X-006",
+      "pinterest": "1013872934832407525",
+      "purchaseDate": 2020,
+      "size": "47.5 x 47 x 62",
+      "score": {
+        "frequencyOfUse": 95,
+        "importance": 100,
+        "indispensability": 75
+      },
+      "category": ["3d printer"],
+      "externalLink": "https://www.123-3d.nl/3D-printers/Creality-3D-Ender-3-V2-p16058.html"
+    },
+
     "55": {
       "title": "Needle-nose pliers",
       "fullName": "Parkside Needle-nose pliers",
@@ -482,25 +510,6 @@
       "title": "Flex",
       "fullName": "FERM Angle Grinder - 750W - 125mm | AGM1087",
       "storage": "X-004"
-    },
-    "05": {
-      "title": "3D printer",
-      "description": "",
-      "fullName": "Ender 2",
-      "subTools": [""],
-      "bothFrom": {
-        "store": "",
-        "price": ""
-      },
-      "state": {
-        "value": "",
-        "needReplace": "",
-        "mods": "",
-        "consumabile": ""
-      },
-      "externalLink": "",
-      "note": "",
-      "purchaseDate": ""
     }
   }
 }

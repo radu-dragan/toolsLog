@@ -22,6 +22,17 @@
         "store": "Emag",
         "price": "10"
       }
+    },
+    "100": {
+      "title": "PLA 1.75 Black",
+      "size": "",
+      "externalLink": "",
+      "note": "",
+      "purchaseDate": "2020",
+      "bothFrom": {
+        "store": "123 NL",
+        "price": "10"
+      }
     }
   }
 }
