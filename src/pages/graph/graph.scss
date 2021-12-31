@@ -1,3 +1,18 @@
-#superblack {
-    background: black;
+.custom-chart {
+  .text {
+    &.legend-x {
+      font-size: 0.75rem;
+      color: rgba(0,0,0,0.6);
+    }
+  }
+
+  .background-grid {
+    color: rgba(0,0,0,0.2);
+  }
+
+  .custom-path {
+    fill: none;
+    stroke-width: 3;
+    
+  }
 }

@@ -1,48 +1,25 @@
 import React from 'react'
 import { Container } from '../Skaffolding/container'
 import MultilineChart from './MultilineChart'
-import schc from './SCHC.json'
-import vcit from './VCIT.json'
-import portfolio from './portfolio.json'
+import portfolio from './testData.json'
 import './graph.scss'
+import { gColor } from './graph_colors'
 
-const portfolioData = {
+const data: any = []
+
+data.push({
   name: 'Portfolio',
-  color: '#ffffff',
-  items: portfolio.map((d) => ({ ...d, date: new Date(d.date) })),
-}
-const schcData = {
-  name: 'SCHC',
-  color: '#d53e4f',
-  items: schc.map((d) => ({ ...d, date: new Date(d.date) })),
-}
-const vcitData = {
-  name: 'VCIT',
-  color: '#5e4fa2',
-  items: vcit.map((d) => ({ ...d, date: new Date(d.date) })),
-}
-
-const dimensions = {
-  width: 1000,
-  height: 300,
-  margin: {
-    top: 30,
-    right: 30,
-    bottom: 30,
-    left: 60,
-  },
-}
+  color: gColor.lines[0],
+  items: portfolio.map((d) => ({ ...d, x: d.marketvalue, y: d.value })),
+})
 
 export const GraphPage: React.FC = () => {
   return (
     <Container title="Graph">
-      <div id="superblack">
-        <MultilineChart
-          // @ts-ignore
-          data={[portfolioData, schcData, vcitData]}
-          dimensions={dimensions}
-        />
-      </div>
+      <MultilineChart
+        // @ts-ignore
+        data={data}
+      />
     </Container>
   )
 }

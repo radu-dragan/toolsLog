@@ -1,6 +1,8 @@
+import _ from 'lodash'
 import React from 'react'
+import './pinterest.style.scss'
 
-export const Pinterest: React.FC<{ id: string; offset: number }> = ({
+export const Pinterest: React.FC<{ id: string | string[]; offset: number }> = ({
   id,
   offset,
 }) => {
@@ -10,11 +12,29 @@ export const Pinterest: React.FC<{ id: string; offset: number }> = ({
 
   return (
     <div className={`col-${offset} iframe-container`}>
-      <iframe
-        title="This is a unique title"
-        src={`https://assets.pinterest.com/ext/embed.html?id=${id}`}
-        scrolling="no"
-      />
+      {_.isArray(id) ? (
+        <>
+          {id.map((itemId: string) => (
+            <div className="responsive">
+              <iframe
+                id={itemId}
+                key={itemId}
+                title="This is a unique title"
+                src={`https://assets.pinterest.com/ext/embed.html?id=${itemId}`}
+                scrolling="no"
+              />
+            </div>
+          ))}
+        </>
+      ) : (
+        <div className="responsive">
+          <iframe
+            title="This is a unique title"
+            src={`https://assets.pinterest.com/ext/embed.html?id=${id}`}
+            scrolling="no"
+          />
+        </div>
+      )}
     </div>
   )
 }

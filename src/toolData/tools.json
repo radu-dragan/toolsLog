@@ -172,7 +172,14 @@
       "title": "3D printer",
       "description": "",
       "fullName": "Creality Ender 2 v2",
-      "subTools": ["Needle nose pliers", "Cutting pliers", "flat screwdriver", "scraper 38mm", "12mm wranch", "14mm wranch"],
+      "subTools": [
+        "Needle nose pliers",
+        "Cutting pliers",
+        "flat screwdriver",
+        "scraper 38mm",
+        "12mm wranch",
+        "14mm wranch"
+      ],
       "bothFrom": {
         "store": "123-3d.nl",
         "price": 200
@@ -506,10 +513,149 @@
       "fullName": "Wolfcraft 5205",
       "storage": "X-002"
     },
+
     "91": {
-      "title": "Flex",
+      "title": "Angle grinder Flex",
       "fullName": "FERM Angle Grinder - 750W - 125mm | AGM1087",
-      "storage": "X-004"
+      "storage": "X-004",
+      "bothFrom": {
+        "store": "Action",
+        "price": 20
+      },
+      "pinterest": "684195368399942343",
+      "note": "Half of it is @marius",
+      "purchaseDate": "2010",
+      "power": "220V",
+      "usesConsumable": ["CX099"],
+      "state": {
+        "value": 10,
+        "needReplace": "-",
+        "mods": "3d printed support garage"
+      }
+    },
+
+    "101": {
+      "title": "Mixed Screwdriver",
+      "fullName": "Magnusson 32 Piece Mixed Screwdriver & Bit Set",
+      "subTools": [
+        "Bit PH1",
+        "Bit PH2",
+        "Bit PH3",
+        "Bit Slotted 3mm",
+        "Bit Slotted 4mm",
+        "Bit Slotted 5mm",
+        "Bit Slotted 6mm",
+        "Bit PZ1",
+        "Bit PZ2",
+        "Bit PZ3",
+        "Bit Hex 3mm",
+        "Bit 4mm",
+        "Bit 5mm",
+        "Bit 6mm",
+        "Bit Torx T10",
+        "Bit T15",
+        "Bit T20",
+        "Bit T25",
+        "Bit T27",
+        "Bit T30",
+        "Bit T40",
+        "Bit T10H",
+        "Bit T20H",
+        "Bit T25H",
+        "Bit T27H",
+        "Bit T30H",
+        "Bit T40H"
+      ],
+      "externalLink": "https://www.amazon.co.uk/Magnusson-Piece-Screwdriver-Colour-Description/dp/B07XG11188",
+      "storage": "X-004",
+      "pinterest": "684195368399942330",
+      "EAN": []
+    },
+    "106": {
+      "title": "Wood Rule Fold",
+      "fullName": "",
+      "storage": "X-004",
+      "pinterest": "684195368399942329"
+    },
+    "112": {
+      "title": "Drill bits",
+      "fullName": "Werckmann Drills and Bitset 63 pieces",
+      "storage": "X-004",
+      "pinterest": ["684195368399946956", "684195368399947161"],
+      "subTools": [
+        "HSS drill 1.5mm",
+        "HSS drill 2mm",
+        "HSS drill 2.5mm",
+        "HSS drill 3mm",
+        "HSS drill 3.2mm",
+        "HSS drill 3.5mm",
+        "HSS drill 4mm",
+        "HSS drill 4.5mm",
+        "HSS drill 4.8mm",
+        "HSS drill 5mm",
+        "HSS drill 5.5mm",
+        "HSS drill 6mm",
+        "HSS drill 6.5mm",
+        "Concrete drills 4mm",
+        "Concrete drills 5mm",
+        "Concrete drills 6mm",
+        "Concrete drills 8mm",
+        "Concrete drills 10mm",
+        "Wood drills 4mm",
+        "Wood drills 5mm",
+        "Wood drills 6mm",
+        "Wood drills 8mm",
+        "Wood drills 10mm",
+        "Wood drills 16mm",
+        "Wood drills 25mm",
+        "Sockets 5mm",
+        "Sockets 6mm",
+        "Sockets 7mm",
+        "Sockets 8mm",
+        "Sockets 9mm",
+        "Sockets 10mm",
+        "Sockets 11mm",
+        "Sockets 12mm",
+        "bit chamfering cutter",
+        "bit magnetic bit holder",
+        "Depth stop",
+        "center pointers",
+        "TODO ADD correct BITS"
+      ]
+    },
+    "118": {
+      "title": "Metric keys",
+      "fullName": "",
+      "storage": "X-004",
+      "pinterest": "684195368399942326"
+    },
+    "119": {
+      "title": "Hex keys",
+      "fullName": "",
+      "storage": "X-004",
+      "pinterest": "684195368399942326"
+    },
+
+    "999": {
+      "title": "",
+      "fullName": "",
+      "storage": "X-004",
+      "pinterest": "",
+      "EAN": []
+    },
+
+    "123": {
+      "title": "Pruner long scissors",
+      "fullName": "GARDENA Pruner scissors starcut 160 plus 3.5m",
+      "storage": "X-004",
+      "pinterest": ["684195368399942332", "1127518456690288925"],
+      "EAN": [4078500028370, 2007007768788]
+    },
+    "124": {
+      "title": "Oscillating Multi Tool",
+      "fullName": "Black And Decker 300W Oscillating Multi Tool",
+      "storage": "X-004",
+      "pinterest": "684195368399942340"
     }
   }
 }

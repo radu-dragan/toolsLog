@@ -23,15 +23,27 @@
         "price": "10"
       }
     },
-    "100": {
-      "title": "PLA 1.75 Black",
-      "size": "",
+
+    "099": {
+      "title": "Angle grinder disk 125mm",
+      "size": "125mm",
       "externalLink": "",
       "note": "",
       "purchaseDate": "2020",
       "bothFrom": {
+        "store": "Action",
+        "price": "4"
+      }
+    },
+    "100": {
+      "title": "PLA 1.75 Black RAL 9017",
+      "weight": "1000",
+      "externalLink": "https://www.123inkt.nl/123inkt-Filament-zwart-1-75-mm-PLA-1-kg-Jupiter-serie-123-3D-huismerk-i39392-t105582.html",
+      "note": "",
+      "purchaseDate": "2020",
+      "bothFrom": {
         "store": "123 NL",
-        "price": "10"
+        "price": "20"
       }
     }
   }
