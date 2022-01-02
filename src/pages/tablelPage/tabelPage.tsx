@@ -27,7 +27,7 @@ export const tablePage: React.FC = () => {
 
         return (
           <Container
-            title={item}
+            title={translateToolCode(item)}
             subTitle={translateToolCode(item)}
             key={keyIndex}
             fluid

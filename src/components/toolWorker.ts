@@ -9,7 +9,7 @@ export const getTool = ({
   store: any
   props: string[]
 }): any => {
-  const idRaw = id.split('-')
+  const idRaw = id?.split('-')
   const toolData = _.get(store, `[${idRaw[0]}][${idRaw[1]}]`)
   if (props && props.length) {
     return _.pick(toolData, props)
@@ -78,7 +78,7 @@ export const flatTolls = (allTools: any) => {
 }
 
 export const selectTool = (id: string, data: any) => {
-  const idRaw = id.split('-')
+  const idRaw = id?.split('-')
   return _.get(data, `[${idRaw[0]}][${idRaw[1]}]`)
 }
 

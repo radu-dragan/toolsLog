@@ -8,12 +8,10 @@ import { Pinterest } from '../components/pinterest'
 import { ItemFactory } from '../components/ToolItemFactoryFunction'
 import { selectTool } from '../components/toolWorker'
 
-// document.getElementsByClassName("no-data").length;
-// const toolData = require('../toolData/tools.json')
-
 interface ToolPath {
   toolId: string
 }
+
 export const ToolID: React.FC = () => {
   const dispatch = useDispatch()
   const storeData = useSelector((state) => state) as any

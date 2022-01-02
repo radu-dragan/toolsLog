@@ -1,6 +1,7 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { getTool } from '../../components/toolWorker'
 
 // export const RequiredRow: React.FC<{
 //   title: string
@@ -141,5 +142,23 @@ export const RequiredRowNew: React.FC<{
       </Link>
       <AddRemoveBtn id={id} nrItems={nrItems} nonIteratable={nonIteratable} />
     </li>
+  )
+}
+
+export const RequiredRowNewLight: React.FC<{ id: string }> = ({ id }) => {
+  const storeData: any = useSelector((state) => state)
+
+  return (
+    <RequiredRowNew
+      {...getTool({
+        id,
+        store: storeData,
+        props: ['title'],
+      })}
+      id={id}
+      units={id.indexOf('CX') === 0 ? 'BUC' : null}
+      nrItems={storeData.logTools[id]?.count || 0}
+      nonIteratable={id.indexOf('CX') !== 0}
+    />
   )
 }
