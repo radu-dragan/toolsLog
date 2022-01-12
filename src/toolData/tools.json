@@ -127,13 +127,14 @@
         "cassette extractor for Shimano HG",
         "Torx wrench T25"
       ],
+      "pinterest": "684195368400031237",
       "usesConsumable": false,
       "power": false
     },
 
     "04": {
       "title": "wrenches 6-19mm",
-      "category": ["wrenches", "fixed wrenches,", "open wrenches"],
+      "category": ["wrenches", "fixed wrenches", "open wrenches"],
       "description": "Open ended wranches",
       "fullName": "Go/on 7x open end wrench",
       "subTools": [
@@ -274,8 +275,21 @@
     },
     "60": {
       "title": "Aspirator",
-      "fullName": "Einhel",
-      "storage": "X-001"
+      "fullName": "Erbauer EVAC18-LI 18V LI-ION EXT",
+      "storage": "X-001",
+      "weight": 1200,
+      "purchaseDate": "2018",
+      "pinterest": "684195368400030739",
+      "externalLink": "https://www.screwfix.com/p/erbauer-evac18-li-18v-li-ion-ext-cordless-vacuum-cleaner-bare/755fv",
+      "category": ["vacuum cleaner", "vacuum"],
+      "bothFrom": {
+        "store": "Brico Depo Bucuresti",
+        "price": 35
+      },
+      "state": {
+        "value": 15
+      },
+      "power": "A-100"
     },
     "61": {
       "title": "Cleste desertizat",
@@ -316,7 +330,24 @@
     },
     "70": {
       "title": "Bormasina",
-      "storage": "X-001"
+      "fullName": "Erbauer ECD18-LI-2 18V",
+      "weight": 1800,
+      "purchaseDate": "2018",
+      "storage": "X-001",
+      "power": "A-100",
+      "pinterest": "684195368400030569",
+      "externalLink": "https://www.screwfix.com/p/erbauer-ecd18-li-2-18v-4-0ah-li-ion-ext-brushless-cordless-combi-drill/265fv",
+      "category": ["drill", "hammer Drill", "screwdriver"],
+      "bothFrom": {
+        "store": "Brico Depo Bucuresti",
+        "price": 100
+      },
+      "state": {
+        "value": 80,
+        "needReplace": "-",
+        "mods": "-"
+      },
+      "EAN": [3663602798552]
     },
     "71": {
       "title": "Drill Wood",
@@ -335,9 +366,24 @@
       "storage": "X-002"
     },
     "75": {
-      "title": "Multitool",
-      "fullName": "Btwin",
-      "storage": "X-002"
+      "title": "Multitool Btwin Bike",
+      "fullName": "Btwin MULTITOOL 100",
+      "storage": "X-002",
+      "weight": 97,
+      "bothFrom": { "store": "Decathlon Romania Bucuresti", "price": 5 },
+      "purchaseDate": "2012",
+      "externalLink": "https://www.decathlon.nl/p/multitool-100-voor-de-fiets/_/R-p-118965",
+      "subTools": [
+        "allen keys 3 mm",
+        "allen keys 4 mm",
+        "allen keys 5 mm",
+        "allen keys 6 mm",
+        "phillips screwdriver",
+        "flat screwdriver."
+      ],
+      "pinterest": "684195368400031477",
+      "usesConsumable": false,
+      "power": false
     },
     "76": {
       "title": "Protractor",
@@ -390,7 +436,7 @@
       "externalLink": "",
       "note": "I think i would like it to be cordLess, but not sure",
       "purchaseDate": "2012",
-      "usesConsumable": ["CX0001"],
+      "usesConsumable": ["CX-001"],
       "size": "",
       "weight": "",
       "power": "220V",
@@ -419,7 +465,7 @@
       "externalLink": "",
       "note": "",
       "purchaseDate": "",
-      "usesConsumable": ["CX0001"],
+      "usesConsumable": ["CX-001"],
       "size": "",
       "weight": "",
       "power": "4AA",
@@ -511,7 +557,13 @@
     "90": {
       "title": "Right Angle",
       "fullName": "Wolfcraft 5205",
-      "storage": "X-002"
+      "storage": "X-002",
+      "bothFrom": {
+        "store": "Dedeman Romania",
+        "price": 10
+      },
+      "pinterest": "684195368400031267",
+      "EAN": [4006885520509]
     },
 
     "91": {
@@ -526,14 +578,18 @@
       "note": "Half of it is @marius",
       "purchaseDate": "2010",
       "power": "220V",
-      "usesConsumable": ["CX099"],
+      "usesConsumable": ["CX-099"],
       "state": {
         "value": 10,
         "needReplace": "-",
         "mods": "3d printed support garage"
       }
     },
-
+    "100": {
+      "title": "Battery Erbauer",
+      "fullName": "Erbauer EBAT18-Li-4 72Wh 4.0Ah",
+      "pinterest": "684195368400030785"
+    },
     "101": {
       "title": "Mixed Screwdriver",
       "fullName": "Magnusson 32 Piece Mixed Screwdriver & Bit Set",

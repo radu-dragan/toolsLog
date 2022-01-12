@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import React from 'react'
+import { useBarcode } from 'react-barcodes'
 import { Link } from 'react-router-dom'
 import { cmToL } from './units_convertor'
 
@@ -36,6 +37,7 @@ export const ItemFactory: React.FC<{
     case 'note':
     case 'monthlyUse':
     case 'type':
+    case 'EaseOfUse':
       return (
         <Line title={props.title} show={!!props.cardData}>
           <p>{props.cardData}</p>
@@ -68,7 +70,8 @@ export const ItemFactory: React.FC<{
                 className="link-unstyled"
                 key={key}
               >
-                {key}&nbsp;|&nbsp;
+                {key}
+                <span className="spacing-element">&nbsp;|&nbsp;</span>
               </Link>
             ))}
           </p>
@@ -105,9 +108,6 @@ export const ItemFactory: React.FC<{
           </p>
         </Line>
       )
-    case 'pinterest':
-    case 'media':
-      return null
 
     case 'weight':
       return (
@@ -117,14 +117,59 @@ export const ItemFactory: React.FC<{
       )
 
     case 'size':
+      const sizeSplit = props.cardData.split('x') || []
       return (
         <Line title={props.title} show={!!props.cardData}>
           <p>
-            {cmToL(props.cardData.split('x'))} L | {props.cardData} cm
+            {sizeSplit.length === 3 && (
+              <>{cmToL(sizeSplit)}&nbsp;L&nbsp;|&nbsp;</>
+            )}
+            {props.cardData}&nbsp;cm
           </p>
         </Line>
       )
-
+    case 'compatibleWith':
+    case 'usesConsumable':
+      return (
+        <Line title={props.title} show={!!props.cardData}>
+          {props.cardData &&
+            props.cardData.map((id: string) => (
+              <p>
+                <Link to={`/${id}`} className="link-unstyled">
+                  {id}
+                </Link>
+              </p>
+            ))}
+        </Line>
+      )
+    case 'power':
+      return (
+        <Line title={props.title} show={!!props.cardData}>
+          <Link to={`/${props.cardData}`} className="link-unstyled">
+            {props.cardData}
+          </Link>
+        </Line>
+      )
+    case 'EAN':
+      return (
+        <Line title={props.title} show={!!props.cardData}>
+          {props.cardData.map((id: string) => (
+            <svg
+              ref={
+                useBarcode({
+                  value: id,
+                  options: {
+                    background: 'transparent',
+                  },
+                }).inputRef
+              }
+            />
+          ))}
+        </Line>
+      )
+    case 'pinterest':
+    case 'media':
+      return null
     default:
       return (
         <Line title={props.title}>

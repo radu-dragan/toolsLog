@@ -45,6 +45,11 @@ code {
   &:hover {
     color: $fontAccent;
   }
+  &:last-child {
+    .spacing-element {
+      display: none;
+    }
+  }
 }
 
 // ------------------ Normalization -------------- 

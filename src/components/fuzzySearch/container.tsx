@@ -10,7 +10,6 @@ export const FuzzyContainer: React.FC = () => {
   Object.keys(storeData).forEach((x: string) => {
     if (['A', 'BK', 'CX', 'Z', 'X'].indexOf(x) !== -1) {
       Object.keys(storeData[x]).forEach((x2: string) => {
-
         superData.push({
           id: `${x}-${x2}`,
           data: `${x}-${x2} ${JSON.stringify(Object.values(storeData[x][x2]))}`,
