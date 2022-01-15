@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { FuzzyContainer } from '../components/fuzzySearch/container'
 import {
   flatSubTools,
   fullPrice,
@@ -26,10 +25,9 @@ export const LandingTool: React.FC = () => {
 
   return (
     <>
-      <FuzzyContainer />
       <Container
         title="Tool Warehouse"
-        back={false}
+        back
         sidebar={
           <>
             <SItem title="Sub Tools">

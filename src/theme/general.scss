@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway&display=swap');
 @import '_variables.scss';
+@import 'pages.scss';
 
 // ------------------ general Rules -------------- 
 body {
@@ -238,4 +239,12 @@ code {
       opacity: 0.8
     }
   }
+}
+
+.landing-page-map {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
 }
