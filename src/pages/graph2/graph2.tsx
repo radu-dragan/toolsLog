@@ -17,7 +17,7 @@ import React, { useEffect } from 'react'
 export const GraphPage2: React.FC = () => {
   // const [data, setData] = useState([])
   useEffect(() => {
-    console.log("2")
+    console.log('2')
     // drawChart(400, 600)
   }, [])
 

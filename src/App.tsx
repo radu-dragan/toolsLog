@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { LandingPage } from './pages/0_landingPage'
+import { AppGrid } from './pages/app_grid'
 import { GraphPage } from './pages/graph/graph'
 import { GraphPage2 } from './pages/graph2/graph2'
 import { GraphPageX } from './pages/graph_exeple/graph'
@@ -19,6 +20,8 @@ const App: React.FC = () => {
         <Route path="/graphExemple2/" component={GraphPage2} />
         <Route path="/graphExemple/" component={GraphPageX} />
         <Route path="/graph/:toolId/:modifiers/" component={GraphPageX} />
+
+        <Route path="/apps/grid/" component={AppGrid} />
 
         <Route path="/table/" component={tablePage} />
         <Route path="/requiredItems/:toolId/" component={requiredTool} />
